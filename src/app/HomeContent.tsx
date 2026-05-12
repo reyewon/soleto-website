@@ -72,9 +72,9 @@ export default function HomeContent() {
         >
           <div className="w-[92vw] md:w-[86vw] lg:w-[82vw] max-w-[1700px]">
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 2.4, delay: 0, ease: [0.19, 1, 0.22, 1] }}
+              transition={{ duration: 4.5, delay: 0, ease: [0.16, 1, 0.3, 1] }}
             >
               <Image
                 src="/images/branding/logo-light.png"
@@ -89,7 +89,7 @@ export default function HomeContent() {
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1.6, delay: 0.3, ease: [0.19, 1, 0.22, 1] }}
+              transition={{ duration: 3.2, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="font-serif italic mt-6 md:mt-8 text-right"
               style={{
                 color: '#f3ece0',
