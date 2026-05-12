@@ -31,3 +31,27 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local automation + scratch space
+.playwright-cli/
+.playwright-mcp/
+.wrangler/
+.claude/
+CLAUDE.md
+scraped-images/
+docs/
+
+# workspace asset folders (originals kept outside the repo)
+/Jan 2025/
+/July 2024/
+/October 2025/
+/Web Res Images/
+/Soleto Videos/
+
+# workspace files at repo root (use public/* for site assets)
+/George.jpg
+/Soleto-Logo-Dark.png
+/Soleto-Logo-Light.png
+/Soleto Header Video.mp4
+/SAMPLE-DAILY-SPECIALS.pdf
+/menu.pdf
