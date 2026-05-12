@@ -1,20 +1,23 @@
 'use client'
 
-import Link from 'next/link'
+import Image from 'next/image'
 import ScrollReveal from './ScrollReveal'
 
 export default function Footer() {
   return (
-    <footer className="border-t" style={{ borderColor: 'var(--border)', backgroundColor: 'var(--bg-primary)' }}>
+    <footer className="relative z-30 border-t" style={{ borderColor: 'var(--border)', backgroundColor: 'var(--bg-primary)' }}>
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 py-section">
         <ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-10">
-            {/* Brand */}
-            <div>
-              <h2 className="font-serif text-h3 font-medium tracking-wider mb-4"
-                  style={{ color: 'var(--text-primary)' }}>
-                S<span style={{ color: 'var(--accent)' }}>O</span>LETO
-              </h2>
+          {/* Brand, full width on mobile */}
+          <div className="mb-10 md:mb-0 md:grid md:grid-cols-3 md:gap-10">
+            <div className="mb-8 md:mb-0">
+              <Image
+                src="/images/branding/logo-dark.png"
+                alt="Soleto"
+                width={2000}
+                height={357}
+                className="h-9 w-auto mb-4"
+              />
               <p className="text-sm leading-relaxed mb-6" style={{ color: 'var(--text-secondary)' }}>
                 Authentic Italian dining in the heart of Southampton&apos;s theatre district,
                 steps from the Mayflower Theatre.
@@ -50,75 +53,134 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Quick Links */}
-            <div>
-              <h3 className="text-xs font-semibold tracking-[0.2em] uppercase mb-6"
-                  style={{ color: 'var(--accent)' }}>
-                Explore
-              </h3>
-              <ul className="space-y-3">
-                {[
-                  { href: '/menu/', label: 'The Menu' },
-                  { href: '/our-story/', label: 'Our Story' },
-                  { href: '/gallery/', label: 'Gallery' },
-                  { href: '/private-dining/', label: 'Private Dining' },
-                  { href: '/contact/', label: 'Contact' },
-                ].map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="link-underline text-sm transition-colors duration-300"
-                      style={{ color: 'var(--text-secondary)' }}
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {/* Hours + Contact, 2 columns on mobile, part of 3-col grid on desktop */}
+            <div className="grid grid-cols-2 gap-8 md:contents">
+              {/* Opening Hours */}
+              <div>
+                <h3 className="mb-4 md:mb-6"
+                    style={{
+                      fontFamily: 'Inter Tight, system-ui, sans-serif',
+                      fontSize: 'var(--step-eyebrow)',
+                      letterSpacing: '0.27em',
+                      textTransform: 'uppercase',
+                      fontWeight: 500,
+                      color: 'var(--text-muted)',
+                    }}>
+                  Opening Hours
+                </h3>
+                <div className="space-y-2 text-sm" style={{ color: 'var(--text-secondary)' }}>
+                  <div className="flex justify-between max-w-[200px]">
+                    <span>Monday</span>
+                    <span>Closed</span>
+                  </div>
+                  <div className="flex justify-between max-w-[200px]">
+                    <span>Tue - Sat</span>
+                    <span>12 - 22</span>
+                  </div>
+                  <div className="flex justify-between max-w-[200px]">
+                    <span>Sunday</span>
+                    <span>12 - 20</span>
+                  </div>
+                </div>
+                <p className="text-[11px] leading-relaxed mt-4 max-w-[260px]" style={{ color: 'var(--text-secondary)', opacity: 0.75 }}>
+                  Opening hours may vary. Please check our booking system or give us a call to confirm if we will be open when you intend to visit.
+                </p>
+              </div>
 
-            {/* Contact */}
-            <div>
-              <h3 className="text-xs font-semibold tracking-[0.2em] uppercase mb-6"
-                  style={{ color: 'var(--accent)' }}>
-                Visit Us
-              </h3>
-              <address className="not-italic text-sm space-y-3" style={{ color: 'var(--text-secondary)' }}>
-                <p>11 Commercial Road<br />Southampton SO15 1GF</p>
-                <p>
-                  <a href="tel:02380234044" className="link-underline transition-colors duration-300">
-                    023 8023 4044
+              {/* Contact */}
+              <div>
+                <h3 className="mb-4 md:mb-6"
+                    style={{
+                      fontFamily: 'Inter Tight, system-ui, sans-serif',
+                      fontSize: 'var(--step-eyebrow)',
+                      letterSpacing: '0.27em',
+                      textTransform: 'uppercase',
+                      fontWeight: 500,
+                      color: 'var(--text-muted)',
+                    }}>
+                  Visit Us
+                </h3>
+                <address className="not-italic text-sm space-y-3" style={{ color: 'var(--text-secondary)' }}>
+                  <p>11 Commercial Road<br />Southampton SO15 1GF</p>
+                  <p>
+                    <a href="tel:02380234044" className="link-underline transition-colors duration-300">
+                      023 8023 4044
+                    </a>
+                  </p>
+                  <p>
+                    <a href="mailto:info@soleto.co.uk" className="link-underline transition-colors duration-300">
+                      info@soleto.co.uk
+                    </a>
+                  </p>
+                </address>
+                {/* Desktop reserve button, stays in contact column */}
+                <div className="hidden md:block mt-6">
+                  <a
+                    href="https://web.dojo.app/create_booking/vendor/bxU6ck62m7nZ2hSjU6_X9UfdHHqOIAn9Nfy8-GrJbI8_restaurant"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-outline text-xs"
+                  >
+                    Reserve a Table
                   </a>
-                </p>
-                <p>
-                  <a href="mailto:info@soleto.co.uk" className="link-underline transition-colors duration-300">
-                    info@soleto.co.uk
-                  </a>
-                </p>
-              </address>
-              <div className="mt-6">
-                <a
-                  href="https://web.dojo.app/create_booking/vendor/bxU6ck62m7nZ2hSjU6_X9UfdHHqOIAn9Nfy8-GrJbI8_restaurant"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-outline text-xs"
-                >
-                  Reserve a Table
-                </a>
+                </div>
               </div>
             </div>
+          </div>
+
+          {/* Mobile reserve button, full width below the grid */}
+          <div className="mt-6 md:hidden">
+            <a
+              href="https://web.dojo.app/create_booking/vendor/bxU6ck62m7nZ2hSjU6_X9UfdHHqOIAn9Nfy8-GrJbI8_restaurant"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline text-xs block text-center w-full"
+            >
+              Reserve a Table
+            </a>
           </div>
         </ScrollReveal>
 
         {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4"
+        <div className="mt-10 md:mt-16 pt-6 md:pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4"
              style={{ borderColor: 'var(--border)' }}>
-          <p className="text-xs" style={{ color: 'var(--text-secondary)' }}>
+          <p className="text-xs text-center md:text-left" style={{ color: 'var(--text-secondary)' }}>
             &copy; {new Date().getFullYear()} Soleto Bistro Trattoria Italiana. All rights reserved.
+            <span className="mx-2" style={{ color: 'var(--border)' }}>|</span>
+            Designed by{' '}
+            <a
+              href="https://kombu.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-underline"
+              style={{ color: 'var(--text-secondary)' }}
+            >
+              Kombu Web Design
+            </a>
           </p>
-          <p className="text-xs" style={{ color: 'var(--text-secondary)' }}>
-            Steps from the Mayflower Theatre, Southampton
-          </p>
+          <div className="flex items-center gap-4">
+            <span className="text-xs flex items-center gap-1" style={{ color: 'var(--text-secondary)' }}>
+              <svg className="w-3 h-3" style={{ color: 'var(--accent)' }} fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              4.7 Google
+            </span>
+            <span className="text-xs" style={{ color: 'var(--border)' }}>|</span>
+            <a
+              href="https://www.tripadvisor.com/Restaurant_Review-g186299-d8337696-Reviews-Soleto-Southampton_Hampshire_England.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs flex items-center gap-1.5 transition-opacity duration-300 hover:opacity-70"
+              style={{ color: 'var(--text-secondary)' }}
+              aria-label="Soleto on TripAdvisor, 4.5 stars"
+            >
+              {/* TripAdvisor owl mark, minimal single-colour */}
+              <svg className="w-4 h-4" viewBox="0 0 28 16" fill="currentColor" aria-hidden="true" style={{ color: 'var(--accent)' }}>
+                <path d="M14 0C9.97 0 6.36 1.22 3.71 3.11H0l2.16 2.36a6.35 6.35 0 1 0 9.48 8.41L14 16l2.36-2.12a6.35 6.35 0 1 0 9.48-8.41L28 3.11h-3.71A17.13 17.13 0 0 0 14 0zM7.82 13.06a4.73 4.73 0 1 1 0-9.46 4.73 4.73 0 0 1 0 9.46zm12.36 0a4.73 4.73 0 1 1 0-9.46 4.73 4.73 0 0 1 0 9.46zM7.82 5.4a2.93 2.93 0 1 0 0 5.86 2.93 2.93 0 0 0 0-5.86zm12.36 0a2.93 2.93 0 1 0 0 5.86 2.93 2.93 0 0 0 0-5.86z"/>
+              </svg>
+              4.5 TripAdvisor
+            </a>
+          </div>
         </div>
       </div>
     </footer>
