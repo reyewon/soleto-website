@@ -168,7 +168,7 @@ export default function Navigation() {
         />
       </header>
 
-      {/* Full-screen takeover menu */}
+      {/* Full-screen takeover menu, navy backdrop + cream/gold palette */}
       <AnimatePresence>
         {isOpen && (
           <motion.aside
@@ -177,7 +177,7 @@ export default function Navigation() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5, ease: [0.19, 1, 0.22, 1] }}
             className="fixed inset-0 z-[60]"
-            style={{ backgroundColor: 'var(--bg-primary)' }}
+            style={{ backgroundColor: '#1d2f3d' }}
           >
             {/* Close X, top-right */}
             <button
@@ -185,7 +185,7 @@ export default function Navigation() {
               className="absolute top-6 right-6 md:top-8 md:right-10"
               aria-label="Close menu"
               style={{
-                color: 'var(--text-primary)',
+                color: '#f3ece0',
                 fontFamily: 'Inter Tight, system-ui, sans-serif',
                 fontSize: 'var(--step-eyebrow)',
                 letterSpacing: '0.27em',
@@ -196,7 +196,7 @@ export default function Navigation() {
               Close
             </button>
 
-            {/* Centred logo, top */}
+            {/* Centred logo, top, light variant for navy backdrop */}
             <Link
               href="/"
               onClick={() => setIsOpen(false)}
@@ -204,7 +204,7 @@ export default function Navigation() {
               className="absolute top-6 left-1/2 -translate-x-1/2 md:top-8"
             >
               <Image
-                src="/images/branding/logo-dark.png"
+                src="/images/branding/logo-light.png"
                 alt="Soleto"
                 width={2000}
                 height={357}
@@ -228,7 +228,7 @@ export default function Navigation() {
                 >
                   <span
                     style={{
-                      color: 'var(--text-muted)',
+                      color: '#b89569',
                       fontFamily: 'Inter Tight, system-ui, sans-serif',
                       fontSize: '11px',
                       letterSpacing: '0.27em',
@@ -239,13 +239,13 @@ export default function Navigation() {
                   </span>
                   <Link
                     href={link.href}
-                    className="font-serif italic"
+                    className="font-serif"
                     style={{
-                      color:
-                        pathname === link.href ? 'var(--accent)' : 'var(--text-primary)',
-                      fontSize: 'clamp(2.5rem, 7vw, 5rem)',
-                      fontWeight: 320,
-                      letterSpacing: '-0.01em',
+                      color: pathname === link.href ? '#b89569' : '#f3ece0',
+                      fontSize: 'clamp(1.85rem, 5vw, 3.5rem)',
+                      fontWeight: 340,
+                      fontVariationSettings: "'opsz' 96, 'SOFT' 30, 'WONK' 0",
+                      letterSpacing: '-0.005em',
                       lineHeight: 1,
                     }}
                   >
@@ -268,7 +268,18 @@ export default function Navigation() {
                   href={RESERVE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-reserve"
+                  style={{
+                    fontFamily: 'Inter Tight, system-ui, sans-serif',
+                    fontSize: 'var(--step-eyebrow)',
+                    letterSpacing: '0.27em',
+                    textTransform: 'uppercase',
+                    fontWeight: 500,
+                    color: '#b89569',
+                    background: 'transparent',
+                    border: 0,
+                    borderBottom: '1px solid currentColor',
+                    paddingBottom: '6px',
+                  }}
                 >
                   Reserve a Table
                 </a>
@@ -279,7 +290,7 @@ export default function Navigation() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6, duration: 0.6 }}
                 className="absolute bottom-8 left-0 right-0 flex flex-col items-center gap-2"
-                style={{ color: 'var(--text-muted)' }}
+                style={{ color: '#f3ece0', opacity: 0.55 }}
               >
                 <p
                   style={{

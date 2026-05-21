@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import ScrollReveal from '@/components/ScrollReveal'
 import ParallaxBg from '@/components/ParallaxBg'
+import MenuReservePill from '@/components/MenuReservePill'
 
 interface MenuItem {
   name: string
@@ -77,10 +78,28 @@ const menuSections: MenuSection[] = [
   },
 ]
 
-const dailySpecials = [
-  'Oysters', 'Mussels', 'Lobster', 'Crab', 'Dover Sole', 'Hake',
-  'Monkfish', 'Seabass', 'Tomahawk Steak', 'Fillet Steak',
-  'Rack of Lamb', 'Veal T-Bone', 'Clams', 'Polpette',
+// Specials change frequently. These mirror the current chalkboard inside the
+// restaurant and should be updated when George changes the board.
+interface Special {
+  name: string
+  description?: string
+  price: string
+  tag?: string
+}
+
+const dailySpecials: Special[] = [
+  { name: 'Fresh Mussels Marinière', price: '16 / 24' },
+  { name: 'King Prawns Linguine', description: 'Garlic, chilli, olive oil', price: '34' },
+  { name: 'Risotto with Mix Seafood', price: '32' },
+  { name: '½ Lobster Linguine', price: '50' },
+  { name: '16oz Veal T-Bone', description: 'Red wine jus, mash and veg', price: '45' },
+  { name: '8oz Fillet Steak', description: 'Fries, rocket, peppercorn sauce', price: '45' },
+  { name: 'Spaghetti Polpette', description: 'Meatballs', price: '24' },
+  { name: 'Fillet of Seabass', description: 'Creamy prawn sauce', price: '32' },
+  { name: 'Crab Linguine', description: 'Garlic, chilli', price: '32' },
+  { name: 'Pappardelle Salmon', description: 'Tomato, cream and basil', price: '28' },
+  { name: "Calves' Liver", description: 'Veg and mash potatoes', price: '32' },
+  { name: 'Pappardelle Leeks', description: 'Mushrooms and cream', price: '23', tag: 'V' },
 ]
 
 const RESERVE_URL =
@@ -109,7 +128,7 @@ export default function MenuContent() {
         </div>
       </section>
 
-      {/* Menu intro, restrained body */}
+      {/* Menu intro + anchor to specials */}
       <section
         style={{
           backgroundColor: 'var(--bg-primary)',
@@ -126,8 +145,24 @@ export default function MenuContent() {
                 color: 'var(--text-secondary)',
               }}
             >
-              Daily specials are on the board inside. Gluten-free pasta available across every
-              pasta dish. Let us know of any allergies or dietary needs when you book.
+              Gluten-free pasta available across every pasta dish. Let us know of any
+              allergies or dietary needs when you book.
+            </p>
+            <p className="mt-8">
+              <a
+                href="#specials"
+                className="link-underline"
+                style={{
+                  fontFamily: 'Inter Tight, system-ui, sans-serif',
+                  fontSize: 'var(--step-eyebrow)',
+                  letterSpacing: '0.27em',
+                  textTransform: 'uppercase',
+                  fontWeight: 500,
+                  color: 'var(--text-primary)',
+                }}
+              >
+                View today&rsquo;s specials
+              </a>
             </p>
           </ScrollReveal>
         </div>
@@ -222,75 +257,156 @@ export default function MenuContent() {
         </section>
       ))}
 
-      {/* Daily Specials, italic over dark image */}
+      {/* Specials, with octopus backdrop */}
       <section
-        data-nav-transparent
-        className="relative overflow-hidden"
+        id="specials"
+        className="relative overflow-hidden border-t"
         style={{
-          paddingTop: 'clamp(4.5rem, 16vh, 13rem)',
-          paddingBottom: 'clamp(4.5rem, 16vh, 13rem)',
+          backgroundColor: 'var(--bg-tertiary)',
+          borderColor: 'var(--border)',
+          paddingTop: 'clamp(5rem, 14vh, 11rem)',
+          paddingBottom: 'clamp(5rem, 14vh, 11rem)',
+          scrollMarginTop: '80px',
         }}
       >
-        <ParallaxBg mode="banner">
+        {/* Octopus, subtle background, left-aligned, fainter on mobile */}
+        <div
+          aria-hidden="true"
+          className="absolute pointer-events-none mix-blend-multiply opacity-[0.04] md:opacity-[0.07]"
+          style={{
+            top: '50%',
+            left: '-22%',
+            transform: 'translateY(-50%)',
+            width: 'clamp(420px, 70%, 1100px)',
+          }}
+        >
           <Image
-            src="/images/blackboard.jpg"
+            src="/images/specials-octopus.jpg"
             alt=""
-            fill
-            className="object-cover"
-            sizes="100vw"
+            width={1600}
+            height={1073}
+            className="block w-full h-auto"
+            sizes="(max-width: 1024px) 100vw, 70vw"
           />
-          <div className="absolute inset-0 bg-black/70" />
-        </ParallaxBg>
-        <div className="relative z-10 max-w-[1100px] mx-auto px-6 md:px-12">
+        </div>
+
+        <div className="relative max-w-3xl mx-auto px-6 md:px-10">
           <ScrollReveal>
+            <p
+              style={{
+                fontFamily: 'Inter Tight, system-ui, sans-serif',
+                fontSize: 'var(--step-eyebrow)',
+                letterSpacing: '0.27em',
+                textTransform: 'uppercase',
+                fontWeight: 500,
+                color: 'var(--text-muted)',
+                marginBottom: '1rem',
+              }}
+            >
+              Changes daily &amp; by season
+            </p>
             <h2
               className="font-serif italic"
               style={{
-                fontSize: 'clamp(2rem, 4vw, 3.5rem)',
+                fontSize: 'clamp(2rem, 4.4vw, 3.75rem)',
                 fontWeight: 400,
-                color: '#f3ece0',
-                lineHeight: 1.15,
-                letterSpacing: '-0.01em',
-                maxWidth: '22ch',
-                textWrap: 'balance',
+                color: 'var(--text-primary)',
+                lineHeight: 1.1,
+                letterSpacing: '-0.012em',
+                marginBottom: '1.5rem',
               }}
             >
-              George writes the specials board each morning. A short list of what just came in.
+              From the Board
             </h2>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.15}>
-            <div className="mt-12 flex flex-wrap gap-x-6 gap-y-3 max-w-3xl">
-              {dailySpecials.map((item) => (
-                <span
-                  key={item}
-                  className="font-serif italic"
-                  style={{
-                    fontSize: 'clamp(15px, 1.1vw, 18px)',
-                    color: '#f3ece0',
-                    fontWeight: 420,
-                  }}
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.25}>
             <p
-              className="mt-10"
+              style={{
+                fontSize: 'var(--step-body)',
+                lineHeight: 1.7,
+                color: 'var(--text-secondary)',
+                maxWidth: '52ch',
+                marginBottom: '3.5rem',
+              }}
+            >
+              George chalks up the day&rsquo;s specials each morning. Fresh fish landed
+              before lunch, cuts from the butcher, pasta pulled by hand. The list below is
+              current at the time of writing &mdash; ask your server for today&rsquo;s
+              full board when you sit down.
+            </p>
+          </ScrollReveal>
+
+          <div className="space-y-7">
+            {dailySpecials.map((item, i) => (
+              <ScrollReveal key={item.name} delay={i * 0.03}>
+                <div className="flex justify-between items-start gap-6">
+                  <div className="flex-1">
+                    <div className="flex items-baseline gap-3">
+                      <h3
+                        className="font-serif"
+                        style={{
+                          fontSize: 'clamp(1.05rem, 1.3vw, 1.25rem)',
+                          fontWeight: 500,
+                          color: 'var(--text-primary)',
+                          lineHeight: 1.2,
+                        }}
+                      >
+                        {item.name}
+                      </h3>
+                      {item.tag && (
+                        <span
+                          style={{
+                            fontFamily: 'Inter Tight, system-ui, sans-serif',
+                            fontSize: '10px',
+                            letterSpacing: '0.27em',
+                            textTransform: 'uppercase',
+                            fontWeight: 500,
+                            color: 'var(--text-muted)',
+                          }}
+                        >
+                          {item.tag}
+                        </span>
+                      )}
+                    </div>
+                    {item.description && (
+                      <p
+                        className="mt-1.5"
+                        style={{
+                          fontSize: 'var(--step-body)',
+                          lineHeight: 1.55,
+                          color: 'var(--text-secondary)',
+                        }}
+                      >
+                        {item.description}
+                      </p>
+                    )}
+                  </div>
+                  <p
+                    className="font-serif tabular whitespace-nowrap"
+                    style={{
+                      fontSize: 'clamp(1.05rem, 1.3vw, 1.25rem)',
+                      fontWeight: 500,
+                      color: 'var(--text-primary)',
+                    }}
+                  >
+                    {item.price}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <ScrollReveal delay={0.2}>
+            <p
+              className="mt-14"
               style={{
                 fontFamily: 'Inter Tight, system-ui, sans-serif',
-                fontSize: '11px',
+                fontSize: 'var(--step-eyebrow)',
                 letterSpacing: '0.27em',
                 textTransform: 'uppercase',
                 fontWeight: 400,
-                color: '#f3ece0',
-                opacity: 0.7,
+                color: 'var(--text-muted)',
               }}
             >
-              Specials change daily, by season and availability.
+              Prices and dishes vary, subject to market availability.
             </p>
           </ScrollReveal>
         </div>
@@ -340,6 +456,8 @@ export default function MenuContent() {
           </ScrollReveal>
         </div>
       </section>
+
+      <MenuReservePill />
     </>
   )
 }

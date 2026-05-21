@@ -69,20 +69,21 @@ html.lenis, html.lenis body {
     font-feature-settings: "ss01", "kern", "liga", "calt";
     background-color: var(--bg-primary);
     color: var(--text-primary);
+    isolation: isolate; /* Safari safety for the fixed multiply overlay */
     transition: background-color 0.6s cubic-bezier(0.19, 1, 0.22, 1),
                 color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   }
 
-  /* Paper-grain overlay, subtle warmth */
+  /* Paper-grain overlay, warm brown gesso, fixed across the viewport */
   body::before {
     content: '';
     position: fixed;
     inset: 0;
     pointer-events: none;
-    z-index: 100;
-    opacity: 0.05;
+    z-index: 1;
+    opacity: 0.28;
     mix-blend-mode: multiply;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.18 0 0 0 0 0.12 0 0 0 0 0.08 0 0 0 0.16 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
   /* Body paragraphs lean lighter, more editorial */

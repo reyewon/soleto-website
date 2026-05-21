@@ -1,4 +1,4 @@
-# Soleto — Bistro Trattoria Italiana (Full Reference)
+# Soleto — Trattoria Italiana (Full Reference)
 
 > Family-run Italian restaurant in Southampton, opposite the Mayflower Theatre. Head chef George Jiojioras serves fresh seafood, handmade pasta and premium steaks with Mediterranean passion.
 
@@ -15,10 +15,11 @@
 
 - **Cuisine:** Italian, Mediterranean, Seafood
 - **Price Range:** ££ (mid-range)
-- **Founded:** 2015
+- **Founded:** 2017
 - **Founders:** George Jiojioras (Head Chef) and Dominika Jiojioras (Front of House)
 - **Location:** Directly opposite the Mayflower Theatre, Southampton's city centre
-- **Private Dining:** Up to 14 guests seated in a dedicated private dining room
+- **Private Dining:** Up to 14 guests seated in a dedicated private dining room at the restaurant
+- **Private Catering:** Off-site catering for 30+ guests across Southampton, Hampshire and the surrounding area, by chef patron George Jiojioras; weddings, corporate events, anniversaries, milestone celebrations
 - **Dietary:** Gluten-free pasta available for all pasta dishes; vegetarian options on menu
 - **Service Charge:** Discretionary 12.5% added to the total bill
 - **Reservations:** Accepted via website, phone or Dojo booking platform
@@ -26,15 +27,19 @@
 
 ## Opening Hours
 
+Summer pattern (evenings only; lunches return in September):
+
 | Day | Hours |
 |-----|-------|
+| Tuesday | 17:00 – 22:00 |
+| Wednesday | 17:00 – 22:00 |
+| Thursday | 17:00 – 22:00 |
+| Friday | 17:00 – 22:00 |
+| Saturday | 17:00 – 22:00 |
+| Sunday | Closed |
 | Monday | Closed |
-| Tuesday | 12:00 – 22:00 |
-| Wednesday | 12:00 – 22:00 |
-| Thursday | 12:00 – 22:00 |
-| Friday | 12:00 – 22:00 |
-| Saturday | 12:00 – 22:00 |
-| Sunday | 12:00 – 20:00 |
+
+Special hours may apply on theatre nights and bank holidays — please call 023 8023 4044 to confirm. Currently closed for refurbishment from 25 May 2026 until approximately 8 June 2026.
 
 ## Awards and Recognition
 
@@ -140,14 +145,31 @@ Each day, George selects the finest seasonal and market-fresh ingredients for th
 
 Note: Gluten-free pasta is available for all pasta dishes. A discretionary 12.5% service charge is added to the total bill.
 
-## Private Dining
+## Private Dining & Catering
 
-Soleto offers a private dining room for special occasions. The room is dressed in rich terracotta tones, warmed by a crystal chandelier and gold-framed mirror. A rustic wooden table creates the perfect setting for an intimate dinner party atmosphere.
+Soleto offers two distinct private services:
+
+### The Private Room (in the restaurant)
+
+A dedicated dining room inside the restaurant at 11 Commercial Road, Southampton, separated from the main dining area. Used for intimate celebrations and corporate dinners.
 
 - **Capacity:** Up to 14 guests seated
-- **Occasions:** Birthdays, anniversaries, corporate events, celebrations
-- **Menus:** Bespoke menus tailored by George for your event
-- **Enquiries:** Call 023 8023 4044 or email info@soleto.co.uk
+- **Setting:** Rich terracotta walls, crystal chandelier, gold-framed mirror, rustic wooden table
+- **Occasions:** Birthdays, anniversaries, corporate dinners, milestone celebrations
+- **Menus:** Bespoke, designed by chef patron George Jiojioras and agreed in advance
+- **Location:** Directly opposite the Mayflower Theatre, central Southampton
+
+### Private Catering (off-site)
+
+Off-site private catering by George and the Soleto kitchen team, for groups of 30 or more, anywhere across Southampton, Hampshire and the surrounding areas.
+
+- **Minimum group size:** 30 guests
+- **Upper limit:** No fixed upper limit; arranged per event
+- **Area served:** Southampton, Hampshire, South Hampshire and surrounding venues
+- **Events catered:** Weddings, corporate events and away days, anniversaries, milestone birthdays, family celebrations, private dinners
+- **Menu:** Designed in conversation with George — Italian and Mediterranean by default, with fresh seafood and hand-rolled pasta as house signatures. Full dietary flexibility (vegetarian, gluten-free, and others on request)
+- **House signatures:** Fresh seafood (lobster, scallops, Dover sole), hand-rolled pasta, prime cuts (rib-eye, veal T-bone, fillet steak), Mediterranean classics
+- **Enquiries:** Call 023 8023 4044 or email info@soleto.co.uk with guest numbers, date, dietary requirements and your venue or location preference
 
 ## Pre-Theatre Dining
 
@@ -159,7 +181,7 @@ Perfectly positioned opposite Southampton's iconic Mayflower Theatre, Soleto is 
 - [Menu](https://www.soleto.co.uk/menu/) — Full à la carte menu with prices and daily specials
 - [Our Story](https://www.soleto.co.uk/our-story/) — The Jiojioras family story, chef profile, awards
 - [Gallery](https://www.soleto.co.uk/gallery/) — Photos of food, interior and drinks
-- [Private Dining](https://www.soleto.co.uk/private-dining/) — Private dining room details and enquiries
+- [Private Dining & Catering](https://www.soleto.co.uk/private-dining/) — Private dining room (up to 14 guests) and off-site catering by George (30+ guests, Hampshire-wide)
 - [Contact](https://www.soleto.co.uk/contact/) — Address, phone, email, map, opening hours
 
 ## Social

@@ -3,6 +3,9 @@ import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import SmoothScroll from '@/components/SmoothScroll'
+import ConsentScript from '@/components/ConsentScript'
+import CookieBanner from '@/components/CookieBanner'
+import RefurbishmentBanner from '@/components/RefurbishmentBanner'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.soleto.co.uk'),
@@ -11,7 +14,7 @@ export const metadata: Metadata = {
     template: '%s | Soleto Southampton',
   },
   description:
-    'Family-run Italian restaurant in Southampton, opposite the Mayflower Theatre. Head chef George Jiojioras serves fresh seafood, handmade pasta and premium steaks with Mediterranean passion. Tue–Sat 12–22, Sun 12–20.',
+    'Family-run Italian restaurant in Southampton, opposite the Mayflower Theatre. Head chef George Jiojioras serves fresh seafood, handmade pasta and premium steaks with Mediterranean passion. Summer evenings: Tue–Sat 17:00–22:00.',
   keywords: [
     'Italian restaurant Southampton',
     'Soleto Southampton',
@@ -19,7 +22,7 @@ export const metadata: Metadata = {
     'seafood restaurant Southampton',
     'restaurant near Mayflower Theatre',
     'Commercial Road restaurant Southampton',
-    'Italian bistro Southampton',
+    'trattoria Southampton',
     'Mediterranean restaurant Southampton',
     'lobster Southampton',
     'oysters Southampton',
@@ -29,9 +32,9 @@ export const metadata: Metadata = {
     'family restaurant Southampton',
     'best restaurant Commercial Road',
   ],
-  authors: [{ name: 'Soleto Bistro Trattoria Italiana' }],
+  authors: [{ name: 'Soleto Trattoria Italiana' }],
   openGraph: {
-    title: 'Soleto | Bistro Trattoria Italiana | Southampton',
+    title: 'Soleto | Trattoria Italiana | Southampton',
     description:
       'Family-run Italian restaurant opposite the Mayflower Theatre. Fresh seafood, handmade pasta and premium steaks by head chef George Jiojioras.',
     url: 'https://www.soleto.co.uk',
@@ -39,22 +42,10 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     images: [
       {
-        url: '/images/hero-lobster.jpg',
-        width: 2000,
-        height: 1333,
-        alt: 'Fresh lobster dish at Soleto Italian Restaurant Southampton',
-      },
-      {
-        url: '/images/hero-interior.jpg',
-        width: 2000,
-        height: 1333,
-        alt: 'Soleto restaurant interior, teal walls, gold frames and white linen',
-      },
-      {
-        url: '/images/chef/george-cooking.jpg',
-        width: 2000,
-        height: 1333,
-        alt: 'Head chef George Jiojioras preparing dishes at Soleto Southampton',
+        url: '/images/og-soleto-table.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'A table set for dinner at Soleto Italian restaurant, Southampton, linguini vongole, wine and flowers',
       },
     ],
   },
@@ -63,7 +54,7 @@ export const metadata: Metadata = {
     title: 'Soleto | Italian Restaurant Southampton',
     description:
       'Family-run Italian restaurant opposite the Mayflower Theatre. Fresh seafood, handmade pasta and premium steaks.',
-    images: ['/images/hero-lobster.jpg'],
+    images: ['/images/og-soleto-table.jpg'],
   },
   robots: {
     index: true,
@@ -88,7 +79,7 @@ const restaurantJsonLd = {
   '@context': 'https://schema.org',
   '@type': ['Restaurant', 'LocalBusiness'],
   '@id': 'https://www.soleto.co.uk/#restaurant',
-  name: 'Soleto | Bistro Trattoria Italiana, Southampton',
+  name: 'Soleto | Trattoria Italiana, Southampton',
   alternateName: 'Soleto Southampton',
   description:
     'Family-run Italian restaurant in Southampton, opposite the Mayflower Theatre. Head chef George Jiojioras serves fresh seafood, handmade pasta and premium steaks with Mediterranean passion.',
@@ -113,19 +104,13 @@ const restaurantJsonLd = {
     latitude: 50.909036,
     longitude: -1.409485,
   },
-  hasMap: 'https://maps.google.com/?q=Soleto+Bistro+Trattoria+Italiana,+11+Commercial+Road,+Southampton+SO15+1GF',
+  hasMap: 'https://maps.google.com/?q=Soleto+Trattoria+Italiana,+11+Commercial+Road,+Southampton+SO15+1GF',
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      opens: '12:00',
+      opens: '17:00',
       closes: '22:00',
-    },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Sunday'],
-      opens: '12:00',
-      closes: '20:00',
     },
   ],
   servesCuisine: ['Italian', 'Mediterranean', 'Seafood'],
@@ -145,7 +130,7 @@ const restaurantJsonLd = {
     { '@type': 'Person', name: 'George Jiojioras' },
     { '@type': 'Person', name: 'Dominika Jiojioras' },
   ],
-  foundingDate: '2015',
+  foundingDate: '2017',
   award: [
     '#1 Best Restaurants in Southampton, The Tour Guy, 2025',
     'Top 5 Italian Restaurants in Southampton, Southampton Times',
@@ -185,7 +170,7 @@ const breadcrumbJsonLd = {
     { '@type': 'ListItem', position: 2, name: 'Menu', item: 'https://www.soleto.co.uk/menu/' },
     { '@type': 'ListItem', position: 3, name: 'Our Story', item: 'https://www.soleto.co.uk/our-story/' },
     { '@type': 'ListItem', position: 4, name: 'Gallery', item: 'https://www.soleto.co.uk/gallery/' },
-    { '@type': 'ListItem', position: 5, name: 'Private Dining', item: 'https://www.soleto.co.uk/private-dining/' },
+    { '@type': 'ListItem', position: 5, name: 'Private Dining & Catering', item: 'https://www.soleto.co.uk/private-dining/' },
     { '@type': 'ListItem', position: 6, name: 'Contact', item: 'https://www.soleto.co.uk/contact/' },
   ],
 }
@@ -193,7 +178,7 @@ const breadcrumbJsonLd = {
 const websiteJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'Soleto | Bistro Trattoria Italiana, Southampton',
+  name: 'Soleto | Trattoria Italiana, Southampton',
   url: 'https://www.soleto.co.uk',
   description:
     'Family-run Italian restaurant in Southampton, opposite the Mayflower Theatre. Fresh seafood, handmade pasta and premium steaks.',
@@ -237,10 +222,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="font-sans">
+        <ConsentScript />
         <SmoothScroll />
+        <RefurbishmentBanner />
         <Navigation />
         <main>{children}</main>
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   )

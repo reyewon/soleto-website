@@ -9,13 +9,13 @@ export const metadata: Metadata = {
     canonical: 'https://www.soleto.co.uk/our-story/',
   },
   openGraph: {
-    title: 'Our Story | Soleto Bistro Trattoria Italiana',
+    title: 'Our Story | Soleto Trattoria Italiana',
     description:
       'Founded by George and Dominika Jiojioras, bringing Greek heritage and Italian craft to Southampton.',
     url: 'https://www.soleto.co.uk/our-story/',
     images: [
       {
-        url: '/images/chef/george-cooking.jpg',
+        url: '/images/og-story.jpg',
         alt: 'Head chef George Jiojioras at Soleto Southampton',
       },
     ],

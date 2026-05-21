@@ -9,13 +9,13 @@ export const metadata: Metadata = {
     canonical: 'https://www.soleto.co.uk/gallery/',
   },
   openGraph: {
-    title: 'Gallery | Soleto Bistro Trattoria Italiana',
+    title: 'Gallery | Soleto Trattoria Italiana',
     description:
       'Photos of our dishes, elegant interior and private dining room at Soleto Southampton.',
     url: 'https://www.soleto.co.uk/gallery/',
     images: [
       {
-        url: '/images/interior/peek-through.jpg',
+        url: '/images/og-gallery.jpg',
         alt: 'Inside Soleto Italian restaurant Southampton',
       },
     ],

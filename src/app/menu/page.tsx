@@ -9,13 +9,13 @@ export const metadata: Metadata = {
     canonical: 'https://www.soleto.co.uk/menu/',
   },
   openGraph: {
-    title: 'Menu | Soleto Bistro Trattoria Italiana',
+    title: 'Menu | Soleto Trattoria Italiana',
     description:
       'Fresh seafood, handmade pasta, premium steaks and daily specials. Italian and Mediterranean dining in Southampton.',
     url: 'https://www.soleto.co.uk/menu/',
     images: [
       {
-        url: '/images/food/oct-1.jpg',
+        url: '/images/og-menu.jpg',
         alt: 'Italian dishes at Soleto Southampton',
       },
     ],

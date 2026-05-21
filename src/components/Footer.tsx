@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import ScrollReveal from './ScrollReveal'
 
 export default function Footer() {
@@ -70,20 +71,16 @@ export default function Footer() {
                 </h3>
                 <div className="space-y-2 text-sm" style={{ color: 'var(--text-secondary)' }}>
                   <div className="flex justify-between max-w-[200px]">
-                    <span>Monday</span>
+                    <span>Tue &ndash; Sat</span>
+                    <span>17 &ndash; 22</span>
+                  </div>
+                  <div className="flex justify-between max-w-[200px]">
+                    <span>Sun &amp; Mon</span>
                     <span>Closed</span>
-                  </div>
-                  <div className="flex justify-between max-w-[200px]">
-                    <span>Tue - Sat</span>
-                    <span>12 - 22</span>
-                  </div>
-                  <div className="flex justify-between max-w-[200px]">
-                    <span>Sunday</span>
-                    <span>12 - 20</span>
                   </div>
                 </div>
                 <p className="text-[11px] leading-relaxed mt-4 max-w-[260px]" style={{ color: 'var(--text-secondary)', opacity: 0.75 }}>
-                  Opening hours may vary. Please check our booking system or give us a call to confirm if we will be open when you intend to visit.
+                  Summer evenings only &mdash; lunches return in September. Special hours may apply on theatre nights and bank holidays; please call to confirm.
                 </p>
               </div>
 
@@ -145,7 +142,15 @@ export default function Footer() {
         <div className="mt-10 md:mt-16 pt-6 md:pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4"
              style={{ borderColor: 'var(--border)' }}>
           <p className="text-xs text-center md:text-left" style={{ color: 'var(--text-secondary)' }}>
-            &copy; {new Date().getFullYear()} Soleto Bistro Trattoria Italiana. All rights reserved.
+            &copy; {new Date().getFullYear()} Soleto Trattoria Italiana. All rights reserved.
+            <span className="mx-2" style={{ color: 'var(--border)' }}>|</span>
+            <Link
+              href="/privacy/"
+              className="link-underline"
+              style={{ color: 'var(--text-secondary)' }}
+            >
+              Privacy &amp; cookies
+            </Link>
             <span className="mx-2" style={{ color: 'var(--border)' }}>|</span>
             Designed by{' '}
             <a

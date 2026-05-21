@@ -1,10 +1,10 @@
 {
-  "name": "Soleto Bistro Trattoria Italiana",
+  "name": "Soleto Trattoria Italiana",
   "short_name": "Soleto",
   "description": "Family-run Italian restaurant in Southampton, opposite the Mayflower Theatre. Fresh seafood, handmade pasta and premium steaks.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#fbf8f6",
-  "theme_color": "#c9a96e",
+  "background_color": "#f3ece0",
+  "theme_color": "#f3ece0",
   "lang": "en-GB"
 }

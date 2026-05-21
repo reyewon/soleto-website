@@ -1,10 +1,10 @@
 // Centralised site data, single source of truth for SEO, structured data, and content
 export const SITE = {
-  name: 'Soleto Bistro Trattoria Italiana',
+  name: 'Soleto Trattoria Italiana',
   shortName: 'Soleto',
-  tagline: 'Bistro Trattoria Italiana',
+  tagline: 'Trattoria Italiana',
   description:
-    'Family-run Italian restaurant in Southampton, opposite the Mayflower Theatre. Head chef George Jiojioras serves fresh seafood, handmade pasta and premium steaks with Mediterranean passion. Tue–Sat 12–22, Sun 12–20.',
+    'Family-run Italian restaurant in Southampton, opposite the Mayflower Theatre. Head chef George Jiojioras serves fresh seafood, handmade pasta and premium steaks with Mediterranean passion. Summer evenings: Tue–Sat 17:00–22:00.',
   url: 'https://www.soleto.co.uk',
   email: 'info@soleto.co.uk',
   telephone: '+442380234044',
@@ -31,24 +31,20 @@ export const GEO = {
 
 export const HOURS = {
   display: [
-    { days: 'Monday', hours: 'Closed' },
-    { days: 'Tue - Sat', hours: '12 - 22' },
-    { days: 'Sunday', hours: '12 - 20' },
+    { days: 'Tue – Sat', hours: '17 – 22' },
+    { days: 'Sun & Mon', hours: 'Closed' },
   ],
+  // Summer pattern: evenings only, Tue-Sat. Closed Sun + Mon.
+  // Lunches return in September.
   schema: [
     {
       '@type': 'OpeningHoursSpecification' as const,
       dayOfWeek: ['Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      opens: '12:00',
+      opens: '17:00',
       closes: '22:00',
     },
-    {
-      '@type': 'OpeningHoursSpecification' as const,
-      dayOfWeek: ['Sunday'],
-      opens: '12:00',
-      closes: '20:00',
-    },
   ],
+  note: 'Special hours may apply on theatre nights and bank holidays — please call to confirm.',
 } as const
 
 export const SOCIAL = {
@@ -85,7 +81,7 @@ export const BRAND = {
   themeColor: '#847958',
   bgColor: '#fbf8f6',
   priceRange: '££',
-  foundingYear: '2015',
+  foundingYear: '2017',
 } as const
 
 export const IMAGES = {
@@ -101,6 +97,6 @@ export const PAGES = [
   { path: '/menu/', label: 'Menu', priority: '0.9', changefreq: 'weekly' },
   { path: '/our-story/', label: 'Our Story', priority: '0.8', changefreq: 'monthly' },
   { path: '/gallery/', label: 'Gallery', priority: '0.7', changefreq: 'monthly' },
-  { path: '/private-dining/', label: 'Private Dining', priority: '0.7', changefreq: 'monthly' },
+  { path: '/private-dining/', label: 'Private Dining & Catering', priority: '0.7', changefreq: 'monthly' },
   { path: '/contact/', label: 'Contact', priority: '0.8', changefreq: 'monthly' },
 ] as const

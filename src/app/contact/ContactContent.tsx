@@ -1,8 +1,102 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import ScrollReveal from '@/components/ScrollReveal'
 import ParallaxBg from '@/components/ParallaxBg'
+
+const MAP_SRC =
+  'https://maps.google.com/maps?q=Soleto+Trattoria+Italiana,+11+Commercial+Road,+Southampton+SO15+1GF&z=16&output=embed'
+
+/**
+ * Loads the Google Maps iframe only when the user has accepted cookies or has
+ * manually clicked "Show map". Otherwise renders a styled placeholder so we
+ * don't fire Google's NID cookie without consent.
+ */
+function ConsentGatedMap() {
+  const [showMap, setShowMap] = useState(false)
+
+  useEffect(() => {
+    try {
+      if (window.localStorage.getItem('soleto_consent_v1') === 'accepted') {
+        setShowMap(true)
+      }
+    } catch {
+      /* localStorage blocked */
+    }
+    const onAccepted = () => setShowMap(true)
+    const onDeclined = () => setShowMap(false)
+    window.addEventListener('soleto:consent-accepted', onAccepted)
+    window.addEventListener('soleto:consent-declined', onDeclined)
+    return () => {
+      window.removeEventListener('soleto:consent-accepted', onAccepted)
+      window.removeEventListener('soleto:consent-declined', onDeclined)
+    }
+  }, [])
+
+  if (showMap) {
+    return (
+      <iframe
+        src={MAP_SRC}
+        width="100%"
+        height="100%"
+        style={{
+          border: 0,
+          position: 'absolute',
+          inset: 0,
+          filter: 'saturate(0.55) contrast(1.05) brightness(0.94) sepia(0.18)',
+        }}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Soleto location on Google Maps"
+      />
+    )
+  }
+
+  return (
+    <div
+      className="absolute inset-0 flex flex-col items-center justify-center text-center px-6"
+      style={{
+        backgroundColor: 'var(--bg-secondary)',
+        border: '1px solid var(--rule)',
+      }}
+    >
+      <p
+        style={{
+          fontFamily: 'Inter Tight, system-ui, sans-serif',
+          fontSize: 'var(--step-eyebrow)',
+          letterSpacing: '0.27em',
+          textTransform: 'uppercase',
+          fontWeight: 500,
+          color: 'var(--text-muted)',
+          marginBottom: '1.25rem',
+        }}
+      >
+        Map
+      </p>
+      <p
+        className="font-serif italic"
+        style={{
+          fontSize: 'clamp(1.25rem, 2.2vw, 1.75rem)',
+          color: 'var(--text-primary)',
+          lineHeight: 1.25,
+          maxWidth: '22ch',
+          marginBottom: '1.75rem',
+        }}
+      >
+        Google Maps sets cookies. Click to load it for this visit.
+      </p>
+      <button
+        type="button"
+        onClick={() => setShowMap(true)}
+        className="btn-reserve"
+      >
+        Show map
+      </button>
+    </div>
+  )
+}
 
 const RESERVE_URL =
   'https://web.dojo.app/create_booking/vendor/bxU6ck62m7nZ2hSjU6_X9UfdHHqOIAn9Nfy8-GrJbI8_restaurant'
@@ -121,18 +215,25 @@ export default function ContactContent() {
                     }}
                   >
                     <div className="flex justify-between max-w-xs">
-                      <span>Monday</span>
+                      <span>Tuesday &ndash; Saturday</span>
+                      <span>17:00 &ndash; 22:00</span>
+                    </div>
+                    <div className="flex justify-between max-w-xs">
+                      <span>Sunday &amp; Monday</span>
                       <span>Closed</span>
                     </div>
-                    <div className="flex justify-between max-w-xs">
-                      <span>Tuesday &ndash; Saturday</span>
-                      <span>12:00 &ndash; 22:00</span>
-                    </div>
-                    <div className="flex justify-between max-w-xs">
-                      <span>Sunday</span>
-                      <span>12:00 &ndash; 20:00</span>
-                    </div>
                   </div>
+                  <p
+                    className="mt-3"
+                    style={{
+                      fontSize: '12px',
+                      lineHeight: 1.5,
+                      color: 'var(--text-muted)',
+                      maxWidth: '32ch',
+                    }}
+                  >
+                    Summer evenings only &mdash; lunches return in September. Special hours may apply on theatre nights and bank holidays; please call to confirm.
+                  </p>
                 </div>
 
                 <div className="sm:col-span-2">
@@ -192,21 +293,7 @@ export default function ContactContent() {
 
             <ScrollReveal direction="right">
               <div className="aspect-square lg:aspect-auto lg:h-full min-h-[400px] relative overflow-hidden">
-                <iframe
-                  src="https://maps.google.com/maps?q=Soleto+Bistro+Trattoria+Italiana,+11+Commercial+Road,+Southampton+SO15+1GF&z=16&output=embed"
-                  width="100%"
-                  height="100%"
-                  style={{
-                    border: 0,
-                    position: 'absolute',
-                    inset: 0,
-                    filter: 'saturate(0.55) contrast(1.05) brightness(0.94) sepia(0.18)',
-                  }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Soleto location on Google Maps"
-                />
+                <ConsentGatedMap />
               </div>
             </ScrollReveal>
           </div>
@@ -234,7 +321,7 @@ export default function ContactContent() {
                 maxWidth: '22ch',
               }}
             >
-              Three minutes from the Mayflower. Book for a leisurely evening, before or after
+              A stone&rsquo;s throw from the Mayflower. Book for a leisurely evening, before or after
               the show.
             </h2>
           </ScrollReveal>

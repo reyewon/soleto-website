@@ -74,7 +74,7 @@ export default function HomeContent() {
             <motion.div
               initial={{ opacity: 0, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 8, delay: 0, ease: 'linear' }}
+              transition={{ duration: 4, delay: 0, ease: 'linear' }}
             >
               <Image
                 src="/images/branding/logo-light.png"
@@ -89,7 +89,7 @@ export default function HomeContent() {
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 5.5, delay: 1.5, ease: 'linear' }}
+              transition={{ duration: 2.75, delay: 0.75, ease: 'linear' }}
               className="font-serif italic mt-6 md:mt-8 text-right"
               style={{
                 color: '#f3ece0',
@@ -98,7 +98,7 @@ export default function HomeContent() {
                 fontWeight: 420,
               }}
             >
-              Southampton, since 2015
+              Southampton, since 2017
             </motion.p>
           </div>
         </motion.div>
@@ -141,6 +141,10 @@ export default function HomeContent() {
                 className="font-serif text-balance"
                 style={{
                   fontSize: 'clamp(2rem, 4vw, 4rem)',
+                  fontWeight: 340,
+                  fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 0",
+                  letterSpacing: '-0.01em',
+                  lineHeight: 1.08,
                   color: 'var(--text-primary)',
                 }}
               >
@@ -155,7 +159,7 @@ export default function HomeContent() {
                   color: 'var(--text-secondary)',
                 }}
               >
-                Family-run, opposite the Mayflower Theatre since 2015. George cooks Italian
+                Family-run, opposite the Mayflower Theatre since 2017. George cooks Italian
                 with a Greek soul: seafood chosen that morning, pasta pulled by hand, specials
                 on the board by the time you sit down.
               </p>
@@ -388,7 +392,7 @@ export default function HomeContent() {
                   maxWidth: '36ch',
                 }}
               >
-                George and Dominika opened Soleto in 2015. We&apos;ve been a family table ever
+                George and Dominika opened Soleto in 2017. We&apos;ve been a family table ever
                 since, with George at the stove and Dom on the floor. Lobster, scallops and
                 pasta we&apos;d cook for our own family on a Sunday afternoon.
               </p>
@@ -438,7 +442,7 @@ export default function HomeContent() {
                 textWrap: 'balance',
               }}
             >
-              Three minutes from the Mayflower. A long evening, taken slowly, before the lights
+              A stone&rsquo;s throw from the Mayflower. A long evening, taken slowly, before the lights
               go down.
             </h2>
             <div className="mt-12 flex items-center gap-8">
@@ -672,11 +676,11 @@ export default function HomeContent() {
             <h2
               className="font-serif"
               style={{
-                fontSize: 'clamp(2.5rem, 8vw, 8rem)',
+                fontSize: 'clamp(2.25rem, 6vw, 5.5rem)',
                 fontWeight: 320,
                 color: 'var(--text-primary)',
-                letterSpacing: '-0.025em',
-                lineHeight: 0.98,
+                letterSpacing: '-0.02em',
+                lineHeight: 1,
                 textWrap: 'balance',
               }}
             >
@@ -707,11 +711,21 @@ export default function HomeContent() {
                   }}
                 >
                   Tuesday &ndash; Saturday <br />
-                  12:00 &ndash; 22:00
+                  17:00 &ndash; 22:00
                   <br />
                   <br />
-                  Sunday <br />
-                  12:00 &ndash; 20:00
+                  Sunday &amp; Monday <br />
+                  Closed
+                </p>
+                <p
+                  className="mt-4"
+                  style={{
+                    fontSize: '12px',
+                    lineHeight: 1.5,
+                    color: 'var(--text-muted)',
+                  }}
+                >
+                  Summer evenings only &mdash; lunches return in September.
                 </p>
               </div>
 

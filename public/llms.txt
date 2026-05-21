@@ -1,4 +1,4 @@
-# Soleto — Bistro Trattoria Italiana
+# Soleto — Trattoria Italiana
 
 > Family-run Italian restaurant in Southampton, opposite the Mayflower Theatre. Head chef George Jiojioras serves fresh seafood, handmade pasta and premium steaks with Mediterranean passion.
 
@@ -14,20 +14,34 @@
 
 - **Cuisine:** Italian, Mediterranean, Seafood
 - **Price Range:** ££ (mid-range)
-- **Founded:** 2015
+- **Founded:** 2017
 - **Founders:** George Jiojioras (Head Chef) and Dominika Jiojioras (Front of House)
 - **Location:** Directly opposite the Mayflower Theatre, Southampton's city centre
-- **Private Dining:** Up to 14 guests seated in a dedicated private dining room
+- **Private Dining:** Up to 14 guests seated in a dedicated private dining room at Soleto
+- **Private Catering:** Off-site catering for 30+ guests across Southampton, Hampshire and surrounding areas; weddings, corporate events, milestone celebrations, by chef George Jiojioras
 - **Dietary:** Gluten-free pasta available for all pasta dishes; vegetarian options on menu
 - **Reservations:** Accepted via website, phone or Dojo booking platform
 
 ## Opening Hours
 
+Summer pattern (evenings only; lunches return September):
+
 | Day | Hours |
 |-----|-------|
-| Monday | Closed |
-| Tuesday – Saturday | 12:00 – 22:00 |
-| Sunday | 12:00 – 20:00 |
+| Tuesday – Saturday | 17:00 – 22:00 |
+| Sunday & Monday | Closed |
+
+Special hours may apply on theatre nights and bank holidays. Please call 023 8023 4044 to confirm.
+
+## Private Dining & Catering
+
+Soleto offers two private services:
+
+**The Private Room** — a dedicated dining room inside the restaurant at 11 Commercial Road, Southampton. Seats up to 14 guests. Terracotta walls, crystal chandelier, gold-framed mirror, rustic wooden table. Used for birthdays, anniversaries, corporate dinners and intimate celebrations. Bespoke menu by chef George Jiojioras agreed in advance.
+
+**Private Catering** — off-site catering by George and the Soleto kitchen team, for groups of 30 or more, anywhere across Southampton, Hampshire and surrounding areas. Weddings, corporate events, anniversaries, milestone birthdays and family celebrations. Menus shaped around the event in conversation with the chef. Italian and Mediterranean by default, with seafood and hand-rolled pasta as house signatures. Full dietary flexibility (vegetarian, gluten-free, etc.) handled on request.
+
+To enquire about either service: call **023 8023 4044** or email **info@soleto.co.uk** with guest numbers, date, dietary needs, and whether you want to dine in the private room at Soleto or have the team cater at your venue.
 
 ## Awards and Recognition
 
@@ -74,7 +88,7 @@ Fresh lobster, seared scallops with guanciale, pappardelle ragu, linguini frutti
 - [Menu](https://www.soleto.co.uk/menu/) — Full à la carte menu with prices and daily specials
 - [Our Story](https://www.soleto.co.uk/our-story/) — The Jiojioras family story, chef profile, awards
 - [Gallery](https://www.soleto.co.uk/gallery/) — Photos of food, interior and drinks
-- [Private Dining](https://www.soleto.co.uk/private-dining/) — Private dining room details and enquiries
+- [Private Dining & Catering](https://www.soleto.co.uk/private-dining/) — Private dining room (up to 14 guests) and off-site catering by George (30+ guests, Hampshire-wide)
 - [Contact](https://www.soleto.co.uk/contact/) — Address, phone, email, map, opening hours
 
 ## Social
