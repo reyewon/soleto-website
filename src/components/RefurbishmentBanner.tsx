@@ -12,7 +12,7 @@ const STORAGE_KEY = 'soleto_refurb_banner_v1'
  *
  * If the refurbishment dates shift, change these two constants and rebuild.
  */
-const CLOSURE_START = new Date('2026-05-25T00:00:00')
+const CLOSURE_START = new Date('2026-05-24T00:00:00')
 const CLOSURE_END = new Date('2026-06-08T00:00:00')
 
 function withinWindow(now: Date) {

@@ -386,8 +386,8 @@ export default function HomeContent() {
               <p
                 className="mt-8"
                 style={{
-                  fontSize: 'var(--step-lead)',
-                  lineHeight: 1.7,
+                  fontSize: 'var(--step-body)',
+                  lineHeight: 1.6,
                   color: 'var(--text-secondary)',
                   maxWidth: '36ch',
                 }}
@@ -487,8 +487,8 @@ export default function HomeContent() {
               <Link href="/gallery/" className="img-hover-zoom img-editorial block">
                 <div className="aspect-[16/9] md:aspect-[16/10] relative">
                   <Image
-                    src="/images/interior/dining-room.jpg"
-                    alt=""
+                    src="/images/interior/table-lamp.jpg"
+                    alt="Warm table set with lamps and wine glasses"
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 66vw"
@@ -501,8 +501,8 @@ export default function HomeContent() {
               <Link href="/gallery/" className="img-hover-zoom img-editorial block">
                 <div className="aspect-[3/4] md:aspect-auto md:h-full relative">
                   <Image
-                    src="/images/interior/oyster-art.jpg"
-                    alt=""
+                    src="/images/drinks/wine-bottles.jpg"
+                    alt="Italian reds in a wooden Charmes de Kirwan crate"
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 50vw, 33vw"
@@ -515,10 +515,11 @@ export default function HomeContent() {
               <Link href="/gallery/" className="img-hover-zoom img-editorial block">
                 <div className="aspect-[4/3] relative">
                   <Image
-                    src="/images/interior/flowers-painting.jpg"
-                    alt=""
+                    src="/images/interior/painting.jpg"
+                    alt="A gold-framed painting under picture light"
                     fill
                     className="object-cover"
+                    style={{ objectPosition: '70% center' }}
                     sizes="(max-width: 768px) 50vw, 42vw"
                   />
                 </div>
@@ -529,8 +530,8 @@ export default function HomeContent() {
               <Link href="/gallery/" className="img-hover-zoom img-editorial block">
                 <div className="aspect-[16/9] md:aspect-[4/3] relative">
                   <Image
-                    src="/images/interior/blue-column-view.jpg"
-                    alt=""
+                    src="/images/drinks/champagne-detail.jpg"
+                    alt="Prosecco bottles chilling in a copper bucket"
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 58vw"

@@ -2,8 +2,13 @@
 
 import Script from 'next/script'
 
-// Read the env var inline at module level. If unset, no GA snippet is injected.
-const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+// Measurement ID. Prefer the build-time env var, but fall back to the known
+// production ID so a missing env var can never silently strip analytics from
+// the build again. NEXT_PUBLIC_* vars are inlined at build time, and local
+// `wrangler pages deploy` builds don't see the Cloudflare dashboard env var,
+// which previously shipped GA-less bundles. The GA measurement ID is public
+// (exposed to every visitor) so hardcoding the fallback is not a secret leak.
+const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-98GTHQRJCJ'
 
 /**
  * Google Consent Mode v2 + GA4 loader.
