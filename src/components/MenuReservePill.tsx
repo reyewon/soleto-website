@@ -50,9 +50,9 @@ export default function MenuReservePill() {
           <div className="flex items-center justify-between gap-4">
             <p
               style={{
-                fontFamily: 'Inter Tight, system-ui, sans-serif',
+                fontFamily: 'Newsreader, Georgia, serif',
                 fontSize: '11px',
-                letterSpacing: '0.27em',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 fontWeight: 500,
                 color: 'var(--text-muted)',
@@ -66,9 +66,9 @@ export default function MenuReservePill() {
               rel="noopener noreferrer"
               className="link-underline"
               style={{
-                fontFamily: 'Inter Tight, system-ui, sans-serif',
+                fontFamily: 'Newsreader, Georgia, serif',
                 fontSize: '11px',
-                letterSpacing: '0.27em',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 fontWeight: 500,
                 color: 'var(--text-primary)',

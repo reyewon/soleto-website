@@ -109,7 +109,7 @@ export default function MenuContent() {
   return (
     <>
       {/* Hero, minimal */}
-      <section data-nav-transparent className="relative h-[60vh] min-h-[400px] overflow-hidden">
+      <section data-nav-transparent className="relative h-[52vh] min-h-[360px] overflow-hidden seam-btm">
         <ParallaxBg>
           <Image
             src="/images/food/oct-1.jpg"
@@ -119,11 +119,27 @@ export default function MenuContent() {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-black/45" />
+          <div className="absolute inset-0 bg-black/30" />
         </ParallaxBg>
-        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
-          <h1 className="font-serif text-h1" style={{ color: '#f3ece0' }}>
-            The Menu
+      </section>
+
+      {/* Page title, book-page opener */}
+      <section
+        style={{
+          backgroundColor: 'var(--bg-primary)',
+          paddingTop: 'clamp(3.5rem, 9vh, 6.5rem)',
+          paddingBottom: 'clamp(1rem, 3vh, 2rem)',
+        }}
+      >
+        <div className="max-w-[880px] mx-auto px-6 text-center">
+          <div className="chapterline mb-6">
+            <span className="smallcaps">From George&rsquo;s kitchen</span>
+          </div>
+          <h1
+            className="font-serif"
+            style={{ fontSize: 'var(--step-h1)', color: 'var(--text-primary)' }}
+          >
+            The menu
           </h1>
         </div>
       </section>
@@ -153,9 +169,9 @@ export default function MenuContent() {
                 href="#specials"
                 className="link-underline"
                 style={{
-                  fontFamily: 'Inter Tight, system-ui, sans-serif',
-                  fontSize: 'var(--step-eyebrow)',
-                  letterSpacing: '0.27em',
+                  fontFamily: 'Newsreader, Georgia, serif',
+                  fontSize: 'var(--step-label)',
+                  letterSpacing: '0.14em',
                   textTransform: 'uppercase',
                   fontWeight: 500,
                   color: 'var(--text-primary)',
@@ -214,9 +230,9 @@ export default function MenuContent() {
                         {item.tag && (
                           <span
                             style={{
-                              fontFamily: 'Inter Tight, system-ui, sans-serif',
+                              fontFamily: 'Newsreader, Georgia, serif',
                               fontSize: '10px',
-                              letterSpacing: '0.27em',
+                              letterSpacing: '0.14em',
                               textTransform: 'uppercase',
                               fontWeight: 500,
                               color: 'var(--text-muted)',
@@ -294,9 +310,9 @@ export default function MenuContent() {
           <ScrollReveal>
             <p
               style={{
-                fontFamily: 'Inter Tight, system-ui, sans-serif',
-                fontSize: 'var(--step-eyebrow)',
-                letterSpacing: '0.27em',
+                fontFamily: 'Newsreader, Georgia, serif',
+                fontSize: 'var(--step-label)',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 fontWeight: 500,
                 color: 'var(--text-muted)',
@@ -329,7 +345,7 @@ export default function MenuContent() {
             >
               George chalks up the day&rsquo;s specials each morning. Fresh fish landed
               before lunch, cuts from the butcher, pasta pulled by hand. The list below is
-              current at the time of writing &mdash; ask your server for today&rsquo;s
+              current at the time of writing; ask your server for today&rsquo;s
               full board when you sit down.
             </p>
           </ScrollReveal>
@@ -354,9 +370,9 @@ export default function MenuContent() {
                       {item.tag && (
                         <span
                           style={{
-                            fontFamily: 'Inter Tight, system-ui, sans-serif',
+                            fontFamily: 'Newsreader, Georgia, serif',
                             fontSize: '10px',
-                            letterSpacing: '0.27em',
+                            letterSpacing: '0.14em',
                             textTransform: 'uppercase',
                             fontWeight: 500,
                             color: 'var(--text-muted)',
@@ -398,9 +414,9 @@ export default function MenuContent() {
             <p
               className="mt-14"
               style={{
-                fontFamily: 'Inter Tight, system-ui, sans-serif',
-                fontSize: 'var(--step-eyebrow)',
-                letterSpacing: '0.27em',
+                fontFamily: 'Newsreader, Georgia, serif',
+                fontSize: 'var(--step-label)',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 fontWeight: 400,
                 color: 'var(--text-muted)',

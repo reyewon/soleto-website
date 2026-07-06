@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: '%s | Soleto Southampton',
   },
   description:
-    'Family-run Italian restaurant in Southampton, opposite the Mayflower Theatre. Head chef George Jiojioras serves fresh seafood, handmade pasta and premium steaks with Mediterranean passion. Summer evenings: Tue–Sat 17:00–22:00.',
+    'Family-run Italian restaurant in Southampton, opposite the Mayflower Theatre. Head chef George Jiojioras serves fresh seafood, handmade pasta and premium steaks with Mediterranean passion. Summer evenings: Tuesday to Saturday, 17:00 to 22:00.',
   keywords: [
     'Italian restaurant Southampton',
     'Soleto Southampton',
@@ -191,7 +191,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="theme-color" content="#f3ece0" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Inter+Tight:ital,wght@0,200..700;1,200..700&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" />
         <link rel="manifest" href="/manifest.webmanifest" />
 
         {/* Restaurant-specific OG address properties */}

@@ -95,9 +95,9 @@ export default function Navigation() {
               className="link-underline"
               style={{
                 color: navInk,
-                fontFamily: 'Inter Tight, system-ui, sans-serif',
-                fontSize: 'var(--step-eyebrow)',
-                letterSpacing: '0.27em',
+                fontFamily: 'Newsreader, Georgia, serif',
+                fontSize: 'var(--step-label)',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 fontWeight: 500,
                 transition: 'color 0.6s cubic-bezier(0.19,1,0.22,1)',
@@ -144,9 +144,9 @@ export default function Navigation() {
               className="link-underline"
               style={{
                 color: navInk,
-                fontFamily: 'Inter Tight, system-ui, sans-serif',
-                fontSize: 'var(--step-eyebrow)',
-                letterSpacing: '0.27em',
+                fontFamily: 'Newsreader, Georgia, serif',
+                fontSize: 'var(--step-label)',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 fontWeight: 500,
                 transition: 'color 0.6s cubic-bezier(0.19,1,0.22,1)',
@@ -186,9 +186,9 @@ export default function Navigation() {
               aria-label="Close menu"
               style={{
                 color: '#f3ece0',
-                fontFamily: 'Inter Tight, system-ui, sans-serif',
-                fontSize: 'var(--step-eyebrow)',
-                letterSpacing: '0.27em',
+                fontFamily: 'Newsreader, Georgia, serif',
+                fontSize: 'var(--step-label)',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 fontWeight: 500,
               }}
@@ -229,10 +229,10 @@ export default function Navigation() {
                   <span
                     style={{
                       color: '#b89569',
-                      fontFamily: 'Inter Tight, system-ui, sans-serif',
-                      fontSize: '11px',
-                      letterSpacing: '0.27em',
-                      fontWeight: 400,
+                      fontFamily: 'Newsreader, Georgia, serif',
+                      fontSize: '12px',
+                      letterSpacing: '0.14em',
+                      fontWeight: 500,
                     }}
                   >
                     {String(i + 1).padStart(2, '0')}
@@ -243,8 +243,7 @@ export default function Navigation() {
                     style={{
                       color: pathname === link.href ? '#b89569' : '#f3ece0',
                       fontSize: 'clamp(1.85rem, 5vw, 3.5rem)',
-                      fontWeight: 340,
-                      fontVariationSettings: "'opsz' 96, 'SOFT' 30, 'WONK' 0",
+                      fontWeight: 400,
                       letterSpacing: '-0.005em',
                       lineHeight: 1,
                     }}
@@ -269,9 +268,9 @@ export default function Navigation() {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
-                    fontFamily: 'Inter Tight, system-ui, sans-serif',
-                    fontSize: 'var(--step-eyebrow)',
-                    letterSpacing: '0.27em',
+                    fontFamily: 'Newsreader, Georgia, serif',
+                    fontSize: 'var(--step-label)',
+                    letterSpacing: '0.14em',
                     textTransform: 'uppercase',
                     fontWeight: 500,
                     color: '#b89569',
@@ -294,9 +293,9 @@ export default function Navigation() {
               >
                 <p
                   style={{
-                    fontFamily: 'Inter Tight, system-ui, sans-serif',
-                    fontSize: '11px',
-                    letterSpacing: '0.27em',
+                    fontFamily: 'Newsreader, Georgia, serif',
+                    fontSize: '12px',
+                    letterSpacing: '0.14em',
                     textTransform: 'uppercase',
                   }}
                 >
@@ -304,9 +303,9 @@ export default function Navigation() {
                 </p>
                 <p
                   style={{
-                    fontFamily: 'Inter Tight, system-ui, sans-serif',
-                    fontSize: '11px',
-                    letterSpacing: '0.27em',
+                    fontFamily: 'Newsreader, Georgia, serif',
+                    fontSize: '12px',
+                    letterSpacing: '0.14em',
                     textTransform: 'uppercase',
                   }}
                   className="tabular"

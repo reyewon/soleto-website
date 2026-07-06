@@ -11,7 +11,7 @@ export default function OurStoryContent() {
   return (
     <>
       {/* Hero, minimal */}
-      <section data-nav-transparent className="relative h-[60vh] min-h-[400px] overflow-hidden">
+      <section data-nav-transparent className="relative h-[52vh] min-h-[360px] overflow-hidden seam-btm">
         <ParallaxBg>
           <Image
             src="/images/interior/dining-room.jpg"
@@ -21,11 +21,27 @@ export default function OurStoryContent() {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-black/45" />
+          <div className="absolute inset-0 bg-black/30" />
         </ParallaxBg>
-        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
-          <h1 className="font-serif text-h1" style={{ color: '#f3ece0' }}>
-            Our Story
+      </section>
+
+      {/* Page title, book-page opener */}
+      <section
+        style={{
+          backgroundColor: 'var(--bg-primary)',
+          paddingTop: 'clamp(3.5rem, 9vh, 6.5rem)',
+          paddingBottom: 'clamp(1rem, 3vh, 2rem)',
+        }}
+      >
+        <div className="max-w-[880px] mx-auto px-6 text-center">
+          <div className="chapterline mb-6">
+            <span className="smallcaps">George <span className="amp">&amp;</span> Dominika</span>
+          </div>
+          <h1
+            className="font-serif"
+            style={{ fontSize: 'var(--step-h1)', color: 'var(--text-primary)' }}
+          >
+            Our story
           </h1>
         </div>
       </section>
@@ -38,34 +54,31 @@ export default function OurStoryContent() {
           paddingBottom: 'clamp(4.5rem, 14vh, 11rem)',
         }}
       >
-        <div className="max-w-[1100px] mx-auto px-6 md:px-10">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
-            <ScrollReveal direction="left" className="md:col-span-7">
-              <h2
-                className="font-serif text-balance"
-                style={{
-                  fontSize: 'clamp(2rem, 4vw, 4rem)',
-                  color: 'var(--text-primary)',
-                }}
-              >
-                Where heritage meets the table.
-              </h2>
-            </ScrollReveal>
-            <div className="md:col-span-5 md:pt-8">
-              <p
-                style={{
-                  fontSize: 'var(--step-body)',
-                  lineHeight: 1.6,
-                  color: 'var(--text-secondary)',
-                }}
-              >
+        <div className="max-w-[880px] mx-auto px-6 md:px-10 text-center">
+          <ScrollReveal>
+            <h2
+              className="font-serif"
+              style={{
+                fontSize: 'var(--step-h2)',
+                color: 'var(--text-primary)',
+              }}
+            >
+              Where heritage meets the table
+            </h2>
+            <div className="prose-cols mt-10">
+              <p className="dropcap">
                 George is Greek. He learned to cook Italian in London, and by 30 he&apos;d
                 opened three of his own restaurants. Soleto is what happened when he and
                 Dominika put everything they&apos;d learned into one dining room opposite
                 the Mayflower Theatre.
               </p>
+              <p>
+                What follows is the story as we would tell it across the pass: two
+                countries, one kitchen, and a room we have looked after like a second
+                home since 2017.
+              </p>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -157,7 +170,7 @@ export default function OurStoryContent() {
                     color: 'var(--text-primary)',
                   }}
                 >
-                  Craft, every service.
+                  Craft, every service
                 </h2>
                 <div
                   className="space-y-5 mt-8"
@@ -228,7 +241,7 @@ export default function OurStoryContent() {
                     color: 'var(--text-primary)',
                   }}
                 >
-                  A warm welcome from Dominika.
+                  A warm welcome from Dominika
                 </h2>
                 <div
                   className="space-y-5 mt-8"
@@ -274,7 +287,7 @@ export default function OurStoryContent() {
                 maxWidth: '20ch',
               }}
             >
-              The room.
+              The room
             </h2>
             <p
               className="mt-8"
@@ -335,7 +348,7 @@ export default function OurStoryContent() {
                 color: 'var(--text-primary)',
               }}
             >
-              On the record.
+              On the record
             </h2>
           </ScrollReveal>
 
@@ -365,9 +378,9 @@ export default function OurStoryContent() {
                   <p
                     className="mt-3"
                     style={{
-                      fontFamily: 'Inter Tight, system-ui, sans-serif',
-                      fontSize: 'var(--step-eyebrow)',
-                      letterSpacing: '0.27em',
+                      fontFamily: 'Newsreader, Georgia, serif',
+                      fontSize: 'var(--step-label)',
+                      letterSpacing: '0.14em',
                       textTransform: 'uppercase',
                       fontWeight: 400,
                       color: 'var(--text-muted)',

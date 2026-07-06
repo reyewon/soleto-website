@@ -59,7 +59,7 @@ export default function GalleryContent() {
   return (
     <>
       {/* Hero */}
-      <section data-nav-transparent className="relative h-[50vh] min-h-[350px] overflow-hidden">
+      <section data-nav-transparent className="relative h-[46vh] min-h-[330px] overflow-hidden seam-btm">
         <ParallaxBg>
           <Image
             src="/images/interior/peek-through.jpg"
@@ -69,10 +69,28 @@ export default function GalleryContent() {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-black/45" />
+          <div className="absolute inset-0 bg-black/30" />
         </ParallaxBg>
-        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
-          <h1 className="font-serif text-h1" style={{ color: '#f3ece0' }}>Gallery</h1>
+      </section>
+
+      {/* Page title, book-page opener */}
+      <section
+        style={{
+          backgroundColor: 'var(--bg-primary)',
+          paddingTop: 'clamp(3.5rem, 9vh, 6.5rem)',
+          paddingBottom: 'clamp(1rem, 3vh, 2rem)',
+        }}
+      >
+        <div className="max-w-[880px] mx-auto px-6 text-center">
+          <div className="chapterline mb-6">
+            <span className="smallcaps">The rooms <span className="amp">&amp;</span> the plates</span>
+          </div>
+          <h1
+            className="font-serif"
+            style={{ fontSize: 'var(--step-h1)', color: 'var(--text-primary)' }}
+          >
+            Gallery
+          </h1>
         </div>
       </section>
 
@@ -86,9 +104,9 @@ export default function GalleryContent() {
                 onClick={() => setActive(cat.value)}
                 className="pb-2 border-b transition-all duration-500"
                 style={{
-                  fontFamily: 'Inter Tight, system-ui, sans-serif',
-                  fontSize: 'var(--step-eyebrow)',
-                  letterSpacing: '0.27em',
+                  fontFamily: 'Newsreader, Georgia, serif',
+                  fontSize: 'var(--step-label)',
+                  letterSpacing: '0.14em',
                   textTransform: 'uppercase',
                   fontWeight: 500,
                   color: active === cat.value ? 'var(--text-primary)' : 'var(--text-muted)',

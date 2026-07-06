@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Fonts loaded via <link> tags in layout.tsx to ensure correct loading order */
+/* Fonts loaded via <link> tags in layout.tsx to ensure correct loading order.
+   Type system ("Aldina"): Cardo (display, 400 at display sizes / 700 for small
+   name tiers) + Newsreader (body serif, small-caps label language). */
 
 /* Lenis smooth scroll */
 html.lenis, html.lenis body {
@@ -34,22 +36,22 @@ html.lenis, html.lenis body {
     --text-primary: #1a1612;   /* ink */
     --text-secondary: #4a4239; /* soot */
     --text-muted:   #7a6f60;   /* aged paper */
-    --accent:       #6e2b26;   /* one accent, used once at a time */
+    --accent:       #6e2b26;   /* oxblood, one accent at a time */
     --accent-hover: #5a221e;
+    --gold:         #b89569;   /* rules, ornaments, keylines only (fails contrast as text) */
     --border:       #d4c8b3;   /* hairline rule */
     --rule:         #c5b89f;   /* slightly darker for serious rules */
     --nav-bg:       rgba(243, 236, 224, 0.94);
     --overlay:      rgba(0, 0, 0, 0.18);
 
-    /* Editorial fluid type scale, perfect-fourth ratio (1.333) */
-    --step-eyebrow: clamp(0.6875rem, 0.66rem + 0.15vw, 0.75rem);    /* 11-12px tracked caps */
-    --step-body:    clamp(0.875rem, 0.83rem + 0.21vw, 0.9375rem);   /* 14-15px body */
-    --step-lead:    clamp(1rem, 0.95rem + 0.27vw, 1.125rem);        /* 16-18px lead paragraph */
-    --step-h3:      clamp(1.5rem, 1.4rem + 0.5vw, 1.875rem);        /* 24-30px h3 */
-    --step-h2:      clamp(2.25rem, 2rem + 1.25vw, 3.5rem);          /* 36-56px h2 */
-    --step-h1:      clamp(3rem, 2.5rem + 2.5vw, 5rem);              /* 48-80px h1 */
-    --step-display: clamp(3.5rem, 2rem + 7.5vw, 9rem);              /* 56-144px display */
-    --step-wordmark: clamp(3rem, 1.2rem + 9vw, 11rem);              /* 48-176px hero wordmark */
+    /* Fluid type scale */
+    --step-label:   13px;                                           /* small-caps labels */
+    --step-body:    clamp(1rem, 0.96rem + 0.2vw, 1.09rem);          /* 16-17.5px Newsreader body */
+    --step-lead:    clamp(1.05rem, 1rem + 0.25vw, 1.15rem);         /* lead paragraph */
+    --step-h3:      clamp(1.3rem, 1.2rem + 0.5vw, 1.6rem);          /* dish-name tier */
+    --step-h2:      clamp(1.9rem, 1.6rem + 1.6vw, 3rem);            /* section headings */
+    --step-h1:      clamp(2.2rem, 1.8rem + 2.2vw, 3.7rem);          /* page headings */
+    --step-display: clamp(2.1rem, 1.6rem + 3vw, 4.4rem);            /* closing address */
   }
 
   * {
@@ -63,10 +65,10 @@ html.lenis, html.lenis body {
   }
 
   body {
-    font-family: 'Inter Tight', system-ui, sans-serif;
-    font-weight: 300;
-    letter-spacing: 0.005em;
-    font-feature-settings: "ss01", "kern", "liga", "calt";
+    font-family: 'Newsreader', Georgia, serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    letter-spacing: 0;
     background-color: var(--bg-primary);
     color: var(--text-primary);
     isolation: isolate; /* Safari safety for the fixed multiply overlay */
@@ -86,42 +88,45 @@ html.lenis, html.lenis body {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.18 0 0 0 0 0.12 0 0 0 0 0.08 0 0 0 0.16 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
-  /* Body paragraphs lean lighter, more editorial */
+  /* Film-grain veil over the whole site, imagery included (ported from the
+     Padharo build). Greyscale noise, barely-there opacity, above everything. */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.028;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 200px 200px;
+  }
+
   p {
-    font-weight: 300;
     text-wrap: pretty;
-    line-height: 1.6;
+    line-height: 1.65;
   }
 
-  address, td, li {
-    font-weight: 300;
-  }
-
-  /* Headings use Fraunces, weight to match the existing deployed site */
+  /* Headings: Cardo, regular weight at display sizes (700 is reserved for
+     small name tiers where mass is needed). No full stops on short headers. */
   h1, .text-display, .text-h1 {
-    font-weight: 450;
-    font-variation-settings: 'opsz' 144, 'SOFT' 30, 'WONK' 0;
+    font-family: 'Cardo', Georgia, serif;
+    font-weight: 400;
     text-wrap: balance;
     letter-spacing: -0.005em;
-    line-height: 1.05;
+    line-height: 1.08;
   }
   h2, .text-h2 {
-    font-weight: 450;
-    font-variation-settings: 'opsz' 96, 'SOFT' 40, 'WONK' 0;
+    font-family: 'Cardo', Georgia, serif;
+    font-weight: 400;
     text-wrap: balance;
     letter-spacing: -0.005em;
-    line-height: 1.1;
+    line-height: 1.14;
   }
   h3, .text-h3 {
-    font-weight: 500;
-    font-variation-settings: 'opsz' 48, 'SOFT' 50, 'WONK' 0;
-    line-height: 1.18;
-  }
-
-  /* Serif accents */
-  .font-serif:not(h1):not(h2):not(h3):not(h4):not(.text-display):not(.text-h1):not(.text-h2):not(.text-h3) {
-    font-weight: 420;
-    font-variation-settings: 'opsz' 36, 'SOFT' 50, 'WONK' 0;
+    font-family: 'Cardo', Georgia, serif;
+    font-weight: 700;
+    line-height: 1.2;
   }
 
   /* Tabular figures for prices and hours */
@@ -140,22 +145,85 @@ html.lenis, html.lenis body {
     text-wrap: balance;
   }
 
-  /* Eyebrow, tracked caps, the Estelle 0.27em value */
-  .eyebrow {
-    font-family: 'Inter Tight', system-ui, sans-serif;
-    font-size: var(--step-eyebrow);
-    letter-spacing: 0.27em;
+  /* ---------- Label language: Newsreader small caps ---------- */
+  .smallcaps {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: var(--step-label);
+    font-weight: 500;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    font-weight: 400;
+    color: var(--text-secondary);
+  }
+  .smallcaps-muted { color: var(--text-muted); }
+  .smallcaps-oxblood { color: var(--accent); }
+  .smallcaps .amp { color: var(--gold); }
+
+  /* Legacy alias: old components use .eyebrow */
+  .eyebrow {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: var(--step-label);
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
     color: var(--text-muted);
   }
 
-  /* Underline link, draws on hover left to right */
+  /* Chapterline: centred small-caps flanked by short gold rules */
+  .chapterline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.1rem;
+  }
+  .chapterline::before,
+  .chapterline::after {
+    content: '';
+    width: 44px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  /* ---------- Links ---------- */
+  /* Small-caps action link: oxblood over a gold rule */
+  .link-sc {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: var(--step-label);
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 1px solid var(--gold);
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
+  .link-sc:hover { color: var(--text-primary); border-color: var(--text-primary); }
+
+  /* Legacy alias: .btn-reserve keeps its name, takes the link-sc look */
+  .btn-reserve {
+    display: inline-block;
+    padding: 0 0 3px 0;
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: var(--step-label);
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--gold);
+    transition: color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+  }
+  .btn-reserve:hover { color: var(--text-primary); border-color: var(--text-primary); }
+  .btn-reserve-light { color: #f3ece0; border-color: var(--gold); }
+  .btn-reserve-light:hover { color: #ffffff; border-color: #f3ece0; }
+
+  /* Underline link, draws on hover left to right (kept behaviour) */
   .link-underline {
     position: relative;
     display: inline-block;
   }
-
   .link-underline::after {
     content: '';
     position: absolute;
@@ -168,60 +236,38 @@ html.lenis, html.lenis body {
     transform-origin: right;
     transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   }
-
   .link-underline:hover::after {
     transform: scaleX(1);
     transform-origin: left;
   }
 
-  /* Section backgrounds */
-  .bg-primary { background-color: var(--bg-primary); }
-  .bg-secondary { background-color: var(--bg-secondary); }
-  .bg-tertiary { background-color: var(--bg-tertiary); }
-  .text-primary { color: var(--text-primary); }
-  .text-secondary { color: var(--text-secondary); }
-  .text-accent { color: var(--accent); }
-  .border-theme { border-color: var(--border); }
-
-  /* Editorial button, restrained, single-word voice */
-  .btn-reserve {
+  /* ---------- Buttons ---------- */
+  /* Filled oxblood: the ticket CTA. One per page at most. */
+  .btn-oxblood {
     display: inline-block;
-    padding: 0;
-    font-family: 'Inter Tight', system-ui, sans-serif;
-    font-size: var(--step-eyebrow);
+    background: var(--accent);
+    color: var(--bg-primary);
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: var(--step-label);
     font-weight: 500;
-    letter-spacing: 0.27em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--text-primary);
-    background: transparent;
+    padding: 13px 30px;
+    text-decoration: none;
     border: 0;
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 6px;
-    transition: color 0.5s cubic-bezier(0.19, 1, 0.22, 1),
-                border-color 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: background 0.3s ease;
     cursor: pointer;
   }
+  .btn-oxblood:hover { background: var(--text-primary); }
 
-  .btn-reserve:hover {
-    color: var(--accent);
-  }
-
-  /* Inverted variant for over-image use */
-  .btn-reserve-light {
-    color: #ffffff;
-  }
-  .btn-reserve-light:hover {
-    color: var(--bg-primary);
-  }
-
-  /* Legacy outline button kept for the footer + inner pages, restyled editorial */
+  /* Legacy outline button, restyled to the label language */
   .btn-outline {
     display: inline-block;
     padding: 12px 32px;
-    font-family: 'Inter Tight', system-ui, sans-serif;
-    font-size: var(--step-eyebrow);
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: var(--step-label);
     font-weight: 500;
-    letter-spacing: 0.27em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--text-primary);
     background-color: transparent;
@@ -229,7 +275,6 @@ html.lenis, html.lenis body {
     transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     cursor: pointer;
   }
-
   .btn-outline:hover {
     background-color: var(--text-primary);
     color: var(--bg-primary);
@@ -239,10 +284,10 @@ html.lenis, html.lenis body {
   .btn-primary {
     display: inline-block;
     padding: 14px 36px;
-    font-family: 'Inter Tight', system-ui, sans-serif;
-    font-size: var(--step-eyebrow);
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: var(--step-label);
     font-weight: 500;
-    letter-spacing: 0.27em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--bg-primary);
     background-color: var(--text-primary);
@@ -250,26 +295,116 @@ html.lenis, html.lenis body {
     transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     cursor: pointer;
   }
-
   .btn-primary:hover {
     background-color: var(--accent);
     border-color: var(--accent);
     color: #ffffff;
   }
 
-  /* Editorial image, slight grading */
+  /* ---------- Book-page prose ---------- */
+  /* Two-column body text with a hairline column rule (desktop only) */
+  .prose-cols {
+    text-align: left;
+    font-size: var(--step-body);
+    line-height: 1.68;
+    color: var(--text-secondary);
+  }
+  @media (min-width: 761px) {
+    .prose-cols {
+      columns: 2;
+      column-gap: 3.2rem;
+      column-rule: 1px solid var(--rule);
+      orphans: 3;
+      widows: 3;
+    }
+  }
+  .prose-cols p + p { margin-top: 1rem; }
+
+  /* Oxblood Cardo drop cap. Apply to at most one lead paragraph per page. */
+  .dropcap::first-letter {
+    font-family: 'Cardo', Georgia, serif;
+    font-size: 3.4em;
+    font-weight: 700;
+    color: var(--accent);
+    float: left;
+    line-height: 0.82;
+    padding: 0.06em 0.12em 0 0;
+  }
+
+  /* ---------- Image-band framing ---------- */
+  /* Full-width double oxblood rule hugging the top/bottom edges of photo or
+     video background sections ONLY. Cream sections meet without rules. */
+  .seam-top, .seam-btm { position: relative; }
+  .seam-top { border-top: 1px solid var(--accent); }
+  .seam-top::before {
+    content: '';
+    position: absolute;
+    top: 3px; left: 0; right: 0;
+    height: 1px;
+    background: var(--accent);
+    pointer-events: none;
+    z-index: 30;
+  }
+  .seam-btm { border-bottom: 1px solid var(--accent); }
+  .seam-btm::after {
+    content: '';
+    position: absolute;
+    bottom: 3px; left: 0; right: 0;
+    height: 1px;
+    background: var(--accent);
+    pointer-events: none;
+    z-index: 30;
+  }
+
+  /* ---------- Ticket panel ---------- */
+  /* Bone box with inward-notched corners and a gold keyline, floated over an
+     image band. One per page at most. Pair with <div class="ticket-keyline">
+     as the first child. */
+  .ticket {
+    position: relative;
+    background: var(--bg-primary);
+    --notch: 16px;
+    -webkit-mask:
+      radial-gradient(circle var(--notch) at 0 0,        transparent calc(var(--notch) - 0.5px), #000 var(--notch)) top left,
+      radial-gradient(circle var(--notch) at 100% 0,     transparent calc(var(--notch) - 0.5px), #000 var(--notch)) top right,
+      radial-gradient(circle var(--notch) at 0 100%,     transparent calc(var(--notch) - 0.5px), #000 var(--notch)) bottom left,
+      radial-gradient(circle var(--notch) at 100% 100%,  transparent calc(var(--notch) - 0.5px), #000 var(--notch)) bottom right;
+    -webkit-mask-size: 51% 51%;
+    -webkit-mask-repeat: no-repeat;
+    mask:
+      radial-gradient(circle var(--notch) at 0 0,        transparent calc(var(--notch) - 0.5px), #000 var(--notch)) top left,
+      radial-gradient(circle var(--notch) at 100% 0,     transparent calc(var(--notch) - 0.5px), #000 var(--notch)) top right,
+      radial-gradient(circle var(--notch) at 0 100%,     transparent calc(var(--notch) - 0.5px), #000 var(--notch)) bottom left,
+      radial-gradient(circle var(--notch) at 100% 100%,  transparent calc(var(--notch) - 0.5px), #000 var(--notch)) bottom right;
+    mask-size: 51% 51%;
+    mask-repeat: no-repeat;
+  }
+  .ticket-keyline {
+    position: absolute;
+    inset: 9px;
+    border: 1px solid var(--gold);
+    pointer-events: none;
+  }
+
+  /* ---------- Section backgrounds ---------- */
+  .bg-primary { background-color: var(--bg-primary); }
+  .bg-secondary { background-color: var(--bg-secondary); }
+  .bg-tertiary { background-color: var(--bg-tertiary); }
+  .text-primary { color: var(--text-primary); }
+  .text-secondary { color: var(--text-secondary); }
+  .text-accent { color: var(--accent); }
+  .border-theme { border-color: var(--border); }
+
+  /* ---------- Imagery ---------- */
   .img-editorial img {
     filter: contrast(1.04) saturate(0.94);
   }
-
   .img-hover-zoom {
     overflow: hidden;
   }
-
   .img-hover-zoom img {
     transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
   }
-
   .img-hover-zoom:hover img {
     transform: scale(1.04);
   }
@@ -281,13 +416,6 @@ html.lenis, html.lenis body {
   }
   .reveal-curtain.in {
     clip-path: inset(0 0 0 0);
-  }
-
-  /* Vertical edge label (Cosme style) */
-  .edge-label {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    text-orientation: mixed;
   }
 
   /* Hairline rule */

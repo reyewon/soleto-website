@@ -4,9 +4,9 @@ import { useState } from 'react'
 import ScrollReveal from '@/components/ScrollReveal'
 
 const labelStyle = {
-  fontFamily: 'Inter Tight, system-ui, sans-serif',
-  fontSize: 'var(--step-eyebrow)',
-  letterSpacing: '0.27em',
+  fontFamily: 'Newsreader, Georgia, serif',
+  fontSize: 'var(--step-label)',
+  letterSpacing: '0.14em',
   textTransform: 'uppercase' as const,
   fontWeight: 500,
   color: 'var(--text-muted)',
@@ -19,9 +19,9 @@ const bodyStyle = {
 }
 
 const sectionHeadingStyle = {
-  fontFamily: 'Fraunces, Georgia, serif',
+  fontFamily: 'Cardo, Georgia, serif',
   fontSize: 'clamp(1.4rem, 2.4vw, 2rem)',
-  fontWeight: 450,
+  fontWeight: 400,
   color: 'var(--text-primary)',
   letterSpacing: '-0.005em',
   lineHeight: 1.15,
@@ -53,7 +53,7 @@ export default function PrivacyContent() {
               className="font-serif text-balance"
               style={{
                 fontSize: 'clamp(2.5rem, 6vw, 5rem)',
-                fontWeight: 450,
+                fontWeight: 400,
                 color: 'var(--text-primary)',
                 letterSpacing: '-0.01em',
                 lineHeight: 1.05,
@@ -144,7 +144,7 @@ export default function PrivacyContent() {
                   <span style={{ color: 'var(--text-primary)', fontWeight: 500 }}>
                     Essential
                   </span>{' '}
-                  &mdash; a single <span className="tabular">localStorage</span> entry
+                  &middot; a single <span className="tabular">localStorage</span> entry
                   (<span className="tabular">soleto_consent_v1</span>) that remembers
                   whether you accepted or declined cookies, so we don&apos;t keep asking.
                   No tracking value. Always set.
@@ -153,7 +153,7 @@ export default function PrivacyContent() {
                   <span style={{ color: 'var(--text-primary)', fontWeight: 500 }}>
                     Analytics (Google Analytics 4)
                   </span>{' '}
-                  &mdash; cookies named <span className="tabular">_ga</span> and{' '}
+                  &middot; cookies named <span className="tabular">_ga</span> and{' '}
                   <span className="tabular">_ga_*</span> that recognise return
                   visitors and aggregate session data. Set only after you click
                   Accept.
@@ -162,7 +162,7 @@ export default function PrivacyContent() {
                   <span style={{ color: 'var(--text-primary)', fontWeight: 500 }}>
                     Embedded map (Google Maps)
                   </span>{' '}
-                  &mdash; when the contact page&apos;s map is loaded, Google sets
+                  &middot; when the contact page&apos;s map is loaded, Google sets
                   its own cookies (most commonly <span className="tabular">NID</span>).
                   We don&apos;t load the map iframe at all until you either accept the
                   cookies banner or click the &ldquo;Show map&rdquo; button on the
@@ -220,9 +220,9 @@ export default function PrivacyContent() {
                 {resetMessage && (
                   <p
                     style={{
-                      fontFamily: 'Inter Tight, system-ui, sans-serif',
-                      fontSize: 'var(--step-eyebrow)',
-                      letterSpacing: '0.27em',
+                      fontFamily: 'Newsreader, Georgia, serif',
+                      fontSize: 'var(--step-label)',
+                      letterSpacing: '0.14em',
                       textTransform: 'uppercase',
                       fontWeight: 400,
                       color: 'var(--accent)',

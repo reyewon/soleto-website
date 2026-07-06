@@ -60,9 +60,9 @@ export default function Footer() {
               <div>
                 <h3 className="mb-4 md:mb-6"
                     style={{
-                      fontFamily: 'Inter Tight, system-ui, sans-serif',
-                      fontSize: 'var(--step-eyebrow)',
-                      letterSpacing: '0.27em',
+                      fontFamily: 'Newsreader, Georgia, serif',
+                      fontSize: 'var(--step-label)',
+                      letterSpacing: '0.14em',
                       textTransform: 'uppercase',
                       fontWeight: 500,
                       color: 'var(--text-muted)',
@@ -71,8 +71,8 @@ export default function Footer() {
                 </h3>
                 <div className="space-y-2 text-sm" style={{ color: 'var(--text-secondary)' }}>
                   <div className="flex justify-between max-w-[200px]">
-                    <span>Tue &ndash; Sat</span>
-                    <span>17 &ndash; 22</span>
+                    <span>Tue to Sat</span>
+                    <span>17 to 22</span>
                   </div>
                   <div className="flex justify-between max-w-[200px]">
                     <span>Sun &amp; Mon</span>
@@ -80,7 +80,7 @@ export default function Footer() {
                   </div>
                 </div>
                 <p className="text-[11px] leading-relaxed mt-4 max-w-[260px]" style={{ color: 'var(--text-secondary)', opacity: 0.75 }}>
-                  Summer evenings only &mdash; lunches return in September. Special hours may apply on theatre nights and bank holidays; please call to confirm.
+                  Summer evenings only; lunches return in September. Special hours may apply on theatre nights and bank holidays; please call to confirm.
                 </p>
               </div>
 
@@ -88,9 +88,9 @@ export default function Footer() {
               <div>
                 <h3 className="mb-4 md:mb-6"
                     style={{
-                      fontFamily: 'Inter Tight, system-ui, sans-serif',
-                      fontSize: 'var(--step-eyebrow)',
-                      letterSpacing: '0.27em',
+                      fontFamily: 'Newsreader, Georgia, serif',
+                      fontSize: 'var(--step-label)',
+                      letterSpacing: '0.14em',
                       textTransform: 'uppercase',
                       fontWeight: 500,
                       color: 'var(--text-muted)',

@@ -75,9 +75,9 @@ export default function RefurbishmentBanner() {
           <div className="flex items-center gap-4">
             <p
               style={{
-                fontFamily: 'Inter Tight, system-ui, sans-serif',
+                fontFamily: 'Newsreader, Georgia, serif',
                 fontSize: '10px',
-                letterSpacing: '0.27em',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 fontWeight: 500,
                 color: 'var(--text-muted)',
@@ -108,9 +108,9 @@ export default function RefurbishmentBanner() {
             >
               <span
                 style={{
-                  fontFamily: 'Inter Tight, system-ui, sans-serif',
+                  fontFamily: 'Newsreader, Georgia, serif',
                   fontSize: '10px',
-                  letterSpacing: '0.27em',
+                  letterSpacing: '0.14em',
                   textTransform: 'uppercase',
                   fontWeight: 500,
                   color: 'var(--text-muted)',

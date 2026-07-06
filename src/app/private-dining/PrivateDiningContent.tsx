@@ -39,7 +39,7 @@ export default function PrivateDiningContent() {
   return (
     <>
       {/* Hero, minimal */}
-      <section data-nav-transparent className="relative h-[60vh] min-h-[400px] overflow-hidden">
+      <section data-nav-transparent className="relative h-[52vh] min-h-[360px] overflow-hidden seam-btm">
         <ParallaxBg>
           <Image
             src="/images/interior/chandelier-room.jpg"
@@ -49,11 +49,27 @@ export default function PrivateDiningContent() {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-black/45" />
+          <div className="absolute inset-0 bg-black/30" />
         </ParallaxBg>
-        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
-          <h1 className="font-serif text-h1" style={{ color: '#f3ece0' }}>
-            Private Dining &amp; Catering
+      </section>
+
+      {/* Page title, book-page opener */}
+      <section
+        style={{
+          backgroundColor: 'var(--bg-primary)',
+          paddingTop: 'clamp(3.5rem, 9vh, 6.5rem)',
+          paddingBottom: 'clamp(1rem, 3vh, 2rem)',
+        }}
+      >
+        <div className="max-w-[880px] mx-auto px-6 text-center">
+          <div className="chapterline mb-6">
+            <span className="smallcaps">In the restaurant <span className="amp">&amp;</span> at your venue</span>
+          </div>
+          <h1
+            className="font-serif"
+            style={{ fontSize: 'var(--step-h1)', color: 'var(--text-primary)' }}
+          >
+            Private dining <span className="amp">&amp;</span> catering
           </h1>
         </div>
       </section>
@@ -66,38 +82,31 @@ export default function PrivateDiningContent() {
           paddingBottom: 'clamp(4.5rem, 14vh, 11rem)',
         }}
       >
-        <div className="max-w-[1100px] mx-auto px-6 md:px-10">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
-            <ScrollReveal direction="left" className="md:col-span-7">
+        <div className="max-w-[880px] mx-auto px-6 md:px-10 text-center">
+          <div className="grid grid-cols-1">
+            <ScrollReveal>
               <h2
-                className="font-serif text-balance"
+                className="font-serif"
                 style={{
-                  fontSize: 'clamp(2rem, 4vw, 4rem)',
-                  fontWeight: 340,
-                  fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 0",
-                  letterSpacing: '-0.01em',
-                  lineHeight: 1.08,
+                  fontSize: 'var(--step-h2)',
                   color: 'var(--text-primary)',
                 }}
               >
-                A private room for fourteen. Off-site catering for thirty and beyond.
+                A private room for fourteen, and catering for thirty and beyond
               </h2>
+              <div className="prose-cols mt-10">
+                <p className="dropcap">
+                  Soleto&rsquo;s private dining and catering service covers two things. In
+                  Southampton, a separate dining room seats up to 14 guests for birthdays,
+                  anniversaries and celebrations behind their own door.
+                </p>
+                <p>
+                  Away from Commercial Road, George cooks for weddings and corporate
+                  events of 30 or more, anywhere across Hampshire. Menus are shaped
+                  around your evening, by hand.
+                </p>
+              </div>
             </ScrollReveal>
-            <div className="md:col-span-5 md:pt-8">
-              <p
-                style={{
-                  fontSize: 'var(--step-body)',
-                  lineHeight: 1.6,
-                  color: 'var(--text-secondary)',
-                }}
-              >
-                Soleto&rsquo;s private dining and catering service covers two things. In
-                Southampton, a separate dining room that seats up to 14 guests for birthdays,
-                anniversaries and celebrations. Off-site, our chef George cooks for weddings
-                and corporate events of 30 or more, anywhere across Hampshire. Menus shaped
-                around your evening, by hand.
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -128,9 +137,9 @@ export default function PrivateDiningContent() {
               <div className="lg:max-w-xl">
                 <p
                   style={{
-                    fontFamily: 'Inter Tight, system-ui, sans-serif',
-                    fontSize: 'var(--step-eyebrow)',
-                    letterSpacing: '0.27em',
+                    fontFamily: 'Newsreader, Georgia, serif',
+                    fontSize: 'var(--step-label)',
+                    letterSpacing: '0.14em',
                     textTransform: 'uppercase',
                     fontWeight: 500,
                     color: 'var(--text-muted)',
@@ -144,7 +153,6 @@ export default function PrivateDiningContent() {
                   style={{
                     fontSize: 'clamp(1.85rem, 3.2vw, 2.75rem)',
                     fontWeight: 340,
-                    fontVariationSettings: "'opsz' 96, 'SOFT' 30, 'WONK' 0",
                     letterSpacing: '-0.005em',
                     lineHeight: 1.12,
                     color: 'var(--text-primary)',
@@ -185,9 +193,9 @@ export default function PrivateDiningContent() {
                     <div key={item.label}>
                       <p
                         style={{
-                          fontFamily: 'Inter Tight, system-ui, sans-serif',
-                          fontSize: 'var(--step-eyebrow)',
-                          letterSpacing: '0.27em',
+                          fontFamily: 'Newsreader, Georgia, serif',
+                          fontSize: 'var(--step-label)',
+                          letterSpacing: '0.14em',
                           textTransform: 'uppercase',
                           fontWeight: 500,
                           color: 'var(--text-muted)',
@@ -229,9 +237,9 @@ export default function PrivateDiningContent() {
                 <p
                   aria-describedby="catering-intro"
                   style={{
-                    fontFamily: 'Inter Tight, system-ui, sans-serif',
-                    fontSize: 'var(--step-eyebrow)',
-                    letterSpacing: '0.27em',
+                    fontFamily: 'Newsreader, Georgia, serif',
+                    fontSize: 'var(--step-label)',
+                    letterSpacing: '0.14em',
                     textTransform: 'uppercase',
                     fontWeight: 500,
                     color: 'var(--text-muted)',
@@ -245,14 +253,13 @@ export default function PrivateDiningContent() {
                   style={{
                     fontSize: 'clamp(1.85rem, 3.4vw, 3rem)',
                     fontWeight: 340,
-                    fontVariationSettings: "'opsz' 96, 'SOFT' 30, 'WONK' 0",
                     letterSpacing: '-0.01em',
                     lineHeight: 1.12,
                     color: 'var(--text-primary)',
                     textWrap: 'balance',
                   }}
                 >
-                  Cooking for your event, on your terms.
+                  Cooking for your event, on your terms
                 </h2>
                 <p
                   id="catering-intro"
@@ -266,7 +273,7 @@ export default function PrivateDiningContent() {
                   Soleto&rsquo;s private catering service is led by chef patron George
                   Jiojioras. For groups of 30 or more, George and the kitchen team cook at the
                   venue of your choice across Southampton, Hampshire and the surrounding
-                  area &mdash; weddings, corporate dinners, anniversaries, and family
+                  area: weddings, corporate dinners, anniversaries, and family
                   gatherings shaped around what you actually want to eat.
                 </p>
                 <div
@@ -284,7 +291,7 @@ export default function PrivateDiningContent() {
                   </p>
                   <p>
                     Fresh seafood, hand-rolled pasta, the prime cuts you would see on the
-                    daily specials board. Full dietary flexibility &mdash; vegetarian,
+                    daily specials board. Full dietary flexibility: vegetarian,
                     gluten-free and other requirements handled without ceremony.
                   </p>
                 </div>
@@ -304,9 +311,9 @@ export default function PrivateDiningContent() {
                     <div key={item.label}>
                       <p
                         style={{
-                          fontFamily: 'Inter Tight, system-ui, sans-serif',
-                          fontSize: 'var(--step-eyebrow)',
-                          letterSpacing: '0.27em',
+                          fontFamily: 'Newsreader, Georgia, serif',
+                          fontSize: 'var(--step-label)',
+                          letterSpacing: '0.14em',
                           textTransform: 'uppercase',
                           fontWeight: 500,
                           color: 'var(--text-muted)',
@@ -357,9 +364,9 @@ export default function PrivateDiningContent() {
           <ScrollReveal>
             <p
               style={{
-                fontFamily: 'Inter Tight, system-ui, sans-serif',
-                fontSize: 'var(--step-eyebrow)',
-                letterSpacing: '0.27em',
+                fontFamily: 'Newsreader, Georgia, serif',
+                fontSize: 'var(--step-label)',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 fontWeight: 500,
                 color: 'var(--text-muted)',
@@ -373,14 +380,13 @@ export default function PrivateDiningContent() {
               style={{
                 fontSize: 'clamp(1.85rem, 3.2vw, 2.5rem)',
                 fontWeight: 340,
-                fontVariationSettings: "'opsz' 96, 'SOFT' 30, 'WONK' 0",
                 letterSpacing: '-0.005em',
                 lineHeight: 1.15,
                 color: 'var(--text-primary)',
                 marginBottom: '2.5rem',
               }}
             >
-              Private dining and catering at Soleto, answered.
+              Private dining and catering at Soleto, answered
             </h2>
           </ScrollReveal>
 
@@ -416,78 +422,64 @@ export default function PrivateDiningContent() {
         </div>
       </section>
 
-      {/* Closing */}
+      {/* Enquiries: the page's ticket moment, over the private room */}
       <section
+        data-nav-transparent
+        className="relative seam-top seam-btm"
         style={{
-          backgroundColor: 'var(--bg-primary)',
-          paddingTop: 'clamp(4rem, 14vh, 10rem)',
-          paddingBottom: 'clamp(4rem, 14vh, 10rem)',
+          paddingTop: 'clamp(5rem, 14vh, 10rem)',
+          paddingBottom: 'clamp(5rem, 14vh, 10rem)',
         }}
       >
-        <div className="max-w-[1100px] mx-auto px-6 md:px-12">
+        <div className="absolute inset-0 overflow-hidden">
+          <Image
+            src="/images/interior/chandelier-room-2.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-black/30" />
+        </div>
+        <div className="relative z-10 max-w-[640px] mx-auto px-5">
           <ScrollReveal>
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
-              <div>
-                <p
-                  style={{
-                    fontSize: 'var(--step-body)',
-                    lineHeight: 1.6,
-                    color: 'var(--text-muted)',
-                    maxWidth: '36ch',
-                  }}
-                >
-                  To arrange private dining or catering, call or email Soleto directly.
-                </p>
-                <div className="mt-6 flex flex-col sm:flex-row gap-6 sm:gap-10">
-                  <a
-                    href="tel:02380234044"
-                    className="tabular link-underline"
-                    style={{
-                      fontFamily: 'Inter Tight, system-ui, sans-serif',
-                      fontSize: 'var(--step-eyebrow)',
-                      letterSpacing: '0.27em',
-                      textTransform: 'uppercase',
-                      fontWeight: 500,
-                      color: 'var(--text-primary)',
-                    }}
-                  >
-                    023 8023 4044
-                  </a>
-                  <a
-                    href="mailto:info@soleto.co.uk?subject=Private%20dining%20or%20catering%20enquiry"
-                    className="link-underline"
-                    style={{
-                      fontFamily: 'Inter Tight, system-ui, sans-serif',
-                      fontSize: 'var(--step-eyebrow)',
-                      letterSpacing: '0.27em',
-                      textTransform: 'uppercase',
-                      fontWeight: 500,
-                      color: 'var(--text-primary)',
-                    }}
-                  >
-                    info@soleto.co.uk
-                  </a>
-                </div>
-              </div>
-              <a
-                href={RESERVE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-serif italic"
+            <div
+              className="ticket text-center"
+              style={{ padding: 'clamp(2.2rem, 5vw, 3.4rem) clamp(1.6rem, 4vw, 3rem)' }}
+            >
+              <div className="ticket-keyline" />
+              <span className="smallcaps smallcaps-oxblood block mb-4">
+                Private dining <span className="amp">&amp;</span> catering enquiries
+              </span>
+              <h2
+                className="font-serif"
+                style={{ fontSize: 'var(--step-h2)', color: 'var(--text-primary)' }}
+              >
+                Tell us about your evening
+              </h2>
+              <p
+                className="mx-auto mt-5"
                 style={{
-                  fontSize: 'clamp(1.5rem, 3vw, 2.25rem)',
-                  fontWeight: 400,
-                  color: 'var(--accent)',
-                  letterSpacing: '-0.01em',
-                  lineHeight: 1,
-                  textDecoration: 'underline',
-                  textDecorationThickness: '1px',
-                  textUnderlineOffset: '0.18em',
-                  alignSelf: 'flex-end',
+                  maxWidth: '30em',
+                  fontSize: 'var(--step-body)',
+                  lineHeight: 1.6,
+                  color: 'var(--text-secondary)',
                 }}
               >
-                Enquire
-              </a>
+                Call or email with the date, the numbers and the occasion, and
+                George will shape a menu around it.
+              </p>
+              <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8">
+                <a href="tel:02380234044" className="link-sc tabular">
+                  023 8023 4044
+                </a>
+                <a
+                  href="mailto:info@soleto.co.uk?subject=Private%20dining%20or%20catering%20enquiry"
+                  className="btn-oxblood"
+                >
+                  Enquire by email
+                </a>
+              </div>
             </div>
           </ScrollReveal>
         </div>

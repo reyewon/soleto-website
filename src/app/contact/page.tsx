@@ -4,7 +4,7 @@ import ContactContent from './ContactContent'
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Contact Soleto Italian restaurant, 11 Commercial Road, Southampton SO15 1GF, opposite the Mayflower Theatre. Call 023 8023 4044 or email info@soleto.co.uk. Summer evenings: Tue–Sat 17:00–22:00.',
+    'Contact Soleto Italian restaurant, 11 Commercial Road, Southampton SO15 1GF, opposite the Mayflower Theatre. Call 023 8023 4044 or email info@soleto.co.uk. Summer evenings: Tuesday to Saturday, 17:00 to 22:00.',
   alternates: {
     canonical: 'https://www.soleto.co.uk/contact/',
   },

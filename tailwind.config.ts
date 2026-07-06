@@ -26,8 +26,11 @@ const config: Config = {
         },
       },
       fontFamily: {
-        serif: ['Fraunces', 'Georgia', 'serif'],
-        sans: ['General Sans', 'system-ui', 'sans-serif'],
+        // Aldina system: Cardo for display, Newsreader for text and labels.
+        // `sans` intentionally maps to Newsreader too - the site is all-serif
+        // and legacy components apply font-sans to body/UI text.
+        serif: ['Cardo', 'Georgia', 'serif'],
+        sans: ['Newsreader', 'Georgia', 'serif'],
       },
       fontSize: {
         'display': ['clamp(3rem, 2rem + 4vw, 5rem)', { lineHeight: '1.02', letterSpacing: '-0.015em' }],

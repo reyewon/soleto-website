@@ -22,11 +22,12 @@ export default function HomeContent() {
 
   return (
     <>
-      {/* Hero: full-bleed, wordmark + single descriptor, no chrome */}
+      {/* Hero: full-bleed video, wordmark + single descriptor. The double
+          oxblood rule closes the band into the cream page. */}
       <section
         ref={heroRef}
         data-nav-transparent
-        className="relative h-screen overflow-hidden"
+        className="relative h-screen overflow-hidden seam-btm"
       >
         <motion.div
           className="absolute inset-[-12%]"
@@ -65,7 +66,7 @@ export default function HomeContent() {
           <div className="absolute inset-0 z-[2] bg-black/35" />
         </motion.div>
 
-        {/* Foreground: wordmark + single italic place line, aligned to wordmark right edge */}
+        {/* Foreground: wordmark + place line, aligned to wordmark right edge */}
         <motion.div
           className="relative z-10 h-full flex flex-col items-center justify-center px-6"
           style={{ opacity: heroOpacity }}
@@ -95,96 +96,67 @@ export default function HomeContent() {
                 color: '#f3ece0',
                 fontSize: 'clamp(14px, 1.1vw, 18px)',
                 letterSpacing: '0.04em',
-                fontWeight: 420,
               }}
             >
               Southampton, since 2017
             </motion.p>
           </div>
         </motion.div>
-
-        {/* Vertical edge label, lower-right */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.65 }}
-          transition={{ duration: 1.5, delay: 0.4 }}
-          className="absolute bottom-8 right-8 md:bottom-10 md:right-10 z-10 hidden md:block"
-        >
-          <p
-            className="edge-label tabular"
-            style={{
-              fontFamily: 'Inter Tight, system-ui, sans-serif',
-              color: '#f3ece0',
-              fontSize: '10px',
-              letterSpacing: '0.42em',
-              textTransform: 'uppercase',
-              fontWeight: 400,
-            }}
-          >
-            11 Commercial Road
-          </p>
-        </motion.div>
       </section>
 
-      {/* Introduction, asymmetric 7/5, single eyebrow */}
+      {/* Welcome: book page. Chapterline, Cardo heading, two-column prose
+          with an oxblood drop cap. */}
       <section
         style={{
           backgroundColor: 'var(--bg-primary)',
-          paddingTop: 'clamp(4.5rem, 16vh, 14rem)',
-          paddingBottom: 'clamp(4.5rem, 16vh, 14rem)',
+          paddingTop: 'clamp(4.5rem, 14vh, 11rem)',
+          paddingBottom: 'clamp(4.5rem, 14vh, 11rem)',
         }}
       >
-        <div className="max-w-[1100px] mx-auto px-6 md:px-10">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
-            <ScrollReveal direction="left" className="md:col-span-7">
-              <h2
-                className="font-serif text-balance"
-                style={{
-                  fontSize: 'clamp(2rem, 4vw, 4rem)',
-                  fontWeight: 340,
-                  fontVariationSettings: "'opsz' 144, 'SOFT' 30, 'WONK' 0",
-                  letterSpacing: '-0.01em',
-                  lineHeight: 1.08,
-                  color: 'var(--text-primary)',
-                }}
-              >
-                A Mediterranean Soul in the Heart of Southampton
-              </h2>
-            </ScrollReveal>
-            <div className="md:col-span-5 md:pt-8">
-              <p
-                style={{
-                  fontSize: 'var(--step-body)',
-                  lineHeight: 1.6,
-                  color: 'var(--text-secondary)',
-                }}
-              >
-                Family-run, opposite the Mayflower Theatre since 2017. George cooks Italian
-                with a Greek soul: seafood chosen that morning, pasta pulled by hand, specials
-                on the board by the time you sit down.
-              </p>
-              <a
-                href={RESERVE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-underline inline-block mt-8"
-                style={{
-                  fontFamily: 'Inter Tight, system-ui, sans-serif',
-                  fontSize: 'var(--step-eyebrow)',
-                  letterSpacing: '0.27em',
-                  textTransform: 'uppercase',
-                  fontWeight: 500,
-                  color: 'var(--text-primary)',
-                }}
-              >
-                Reserve
-              </a>
+        <div className="max-w-[880px] mx-auto px-6 md:px-10 text-center">
+          <ScrollReveal>
+            <div className="chapterline mb-7">
+              <span className="smallcaps">
+                Family run <span className="amp">&amp;</span> family owned
+              </span>
             </div>
-          </div>
+            <h2
+              className="font-serif"
+              style={{
+                fontSize: 'var(--step-h1)',
+                color: 'var(--text-primary)',
+              }}
+            >
+              A family table since 2017
+            </h2>
+            <div className="prose-cols mt-10">
+              <p className="dropcap">
+                We opened Soleto in 2017 and it still runs the way a family
+                kitchen should: George cooks and Dominika keeps the room. The
+                fish is bought the same morning it is served, the pasta never
+                meets a machine, and what the market has decides what the
+                blackboard says.
+              </p>
+              <p>
+                You will probably meet one of us at the door. That is not a
+                policy; it is just what happens when the owners are in the
+                building every night it is open. Bring the family, order the
+                specials, and stay for as long as the evening deserves.
+              </p>
+            </div>
+            <a
+              href={RESERVE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-sc inline-block mt-10"
+            >
+              Reserve a table
+            </a>
+          </ScrollReveal>
         </div>
       </section>
 
-      {/* Three dishes, asymmetric 7/5, no section header, no Roman numerals */}
+      {/* Three dishes: the live asymmetric grid, retyped */}
       <section
         style={{
           backgroundColor: 'var(--bg-secondary)',
@@ -211,24 +183,22 @@ export default function HomeContent() {
                 <h3
                   className="font-serif"
                   style={{
-                    fontSize: 'clamp(1.5rem, 2.2vw, 2rem)',
-                    fontWeight: 380,
+                    fontSize: 'var(--step-h3)',
                     color: 'var(--text-primary)',
                     letterSpacing: '-0.005em',
-                    lineHeight: 1.1,
                   }}
                 >
                   Whole lobster
                 </h3>
                 <p
-                  className="mt-2"
+                  className="mt-1 italic"
                   style={{
-                    color: 'var(--text-secondary)',
+                    color: 'var(--text-muted)',
                     fontSize: 'var(--step-body)',
                     lineHeight: 1.55,
                   }}
                 >
-                  Garlic butter, lemon, seasonal vegetables.
+                  garlic butter, lemon, seasonal vegetables
                 </p>
               </div>
             </ScrollReveal>
@@ -250,23 +220,21 @@ export default function HomeContent() {
                   <h3
                     className="font-serif"
                     style={{
-                      fontSize: 'clamp(1.25rem, 1.6vw, 1.5rem)',
-                      fontWeight: 380,
+                      fontSize: 'calc(var(--step-h3) * 0.88)',
                       color: 'var(--text-primary)',
-                      lineHeight: 1.1,
                     }}
                   >
                     Seared scallops
                   </h3>
                   <p
-                    className="mt-2"
+                    className="mt-1 italic"
                     style={{
-                      color: 'var(--text-secondary)',
+                      color: 'var(--text-muted)',
                       fontSize: 'var(--step-body)',
                       lineHeight: 1.55,
                     }}
                   >
-                    Crisp guanciale, pea purée.
+                    crisp guanciale, pea pur&eacute;e
                   </p>
                 </div>
               </ScrollReveal>
@@ -276,7 +244,7 @@ export default function HomeContent() {
                   <div className="aspect-[16/10] lg:aspect-[4/3] relative">
                     <Image
                       src="/images/food/oct-20.jpg"
-                      alt="Pappardelle ragu"
+                      alt="Pappardelle al ragù"
                       fill
                       className="object-cover"
                       style={{ objectPosition: '35% center' }}
@@ -288,23 +256,21 @@ export default function HomeContent() {
                   <h3
                     className="font-serif"
                     style={{
-                      fontSize: 'clamp(1.25rem, 1.6vw, 1.5rem)',
-                      fontWeight: 380,
+                      fontSize: 'calc(var(--step-h3) * 0.88)',
                       color: 'var(--text-primary)',
-                      lineHeight: 1.1,
                     }}
                   >
-                    Pappardelle al ragù
+                    Pappardelle al rag&ugrave;
                   </h3>
                   <p
-                    className="mt-2"
+                    className="mt-1 italic"
                     style={{
-                      color: 'var(--text-secondary)',
+                      color: 'var(--text-muted)',
                       fontSize: 'var(--step-body)',
                       lineHeight: 1.55,
                     }}
                   >
-                    Slow-cooked beef, hand-rolled ribbons.
+                    slow-cooked beef, hand-rolled ribbons
                   </p>
                 </div>
               </ScrollReveal>
@@ -313,18 +279,7 @@ export default function HomeContent() {
 
           <ScrollReveal delay={0.3}>
             <div className="mt-10 md:mt-20 flex justify-end">
-              <Link
-                href="/menu/"
-                className="link-underline"
-                style={{
-                  fontFamily: 'Inter Tight, system-ui, sans-serif',
-                  fontSize: 'var(--step-eyebrow)',
-                  letterSpacing: '0.27em',
-                  textTransform: 'uppercase',
-                  fontWeight: 500,
-                  color: 'var(--text-primary)',
-                }}
-              >
+              <Link href="/menu/" className="link-sc">
                 View the menu
               </Link>
             </div>
@@ -332,7 +287,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* The Chef, asymmetric 7/5, italic headline carries identity */}
+      {/* The chef: live layout, Cardo heading, new copy */}
       <section
         style={{
           backgroundColor: 'var(--bg-primary)',
@@ -354,50 +309,38 @@ export default function HomeContent() {
                   />
                 </div>
               </div>
-              <p
-                className="mt-4"
-                style={{
-                  fontFamily: 'Inter Tight, system-ui, sans-serif',
-                  fontSize: 'var(--step-eyebrow)',
-                  letterSpacing: '0.27em',
-                  textTransform: 'uppercase',
-                  fontWeight: 400,
-                  color: 'var(--text-muted)',
-                }}
-              >
-                George Jiojioras, Chef &amp; Co-Owner
+              <p className="smallcaps mt-4" style={{ color: 'var(--text-muted)' }}>
+                George Jiojioras &middot; chef <span className="amp">&amp;</span> co-owner
               </p>
             </ScrollReveal>
 
             <ScrollReveal direction="right" className="lg:col-span-5 lg:pt-12">
               <h2
-                className="font-serif italic"
+                className="font-serif"
                 style={{
-                  fontSize: 'clamp(1.85rem, 3.2vw, 2.75rem)',
-                  fontWeight: 350,
+                  fontSize: 'var(--step-h2)',
                   color: 'var(--text-primary)',
-                  letterSpacing: '-0.01em',
-                  lineHeight: 1.12,
                   textWrap: 'balance',
                 }}
               >
-                Where Greek heritage meets Italian craft.
+                Where Greek heritage meets Italian craft
               </h2>
               <p
-                className="mt-8"
+                className="mt-7"
                 style={{
                   fontSize: 'var(--step-body)',
-                  lineHeight: 1.6,
+                  lineHeight: 1.66,
                   color: 'var(--text-secondary)',
-                  maxWidth: '36ch',
+                  maxWidth: '38ch',
                 }}
               >
-                George and Dominika opened Soleto in 2017. We&apos;ve been a family table ever
-                since, with George at the stove and Dom on the floor. Lobster, scallops and
-                pasta we&apos;d cook for our own family on a Sunday afternoon.
+                George grew up in Greek kitchens and trained in Italian ones,
+                and the menu carries both without apologising for either.
+                Lobster, scallops and hand-rolled pasta, cooked the way we
+                would cook them for our own Sunday table.
               </p>
-              <div className="mt-10">
-                <Link href="/our-story/" className="btn-reserve">
+              <div className="mt-9">
+                <Link href="/our-story/" className="link-sc">
                   Read the letter
                 </Link>
               </div>
@@ -406,13 +349,14 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Mayflower banner, italic quote alone over the image */}
+      {/* Before the curtain: ticket-stub panel over the dining room,
+          framed by double oxblood rules */}
       <section
         data-nav-transparent
-        className="relative"
+        className="relative seam-top seam-btm"
         style={{
-          paddingTop: 'clamp(4rem, 16vh, 13rem)',
-          paddingBottom: 'clamp(4rem, 16vh, 13rem)',
+          paddingTop: 'clamp(5rem, 15vh, 11rem)',
+          paddingBottom: 'clamp(5rem, 15vh, 11rem)',
         }}
       >
         <div className="absolute inset-0 overflow-hidden">
@@ -424,56 +368,56 @@ export default function HomeContent() {
               className="object-cover"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-black/55" />
+            <div className="absolute inset-0 bg-black/25" />
           </ParallaxBg>
         </div>
 
-        <div className="relative z-10 max-w-[1100px] mx-auto px-6 md:px-12">
+        <div className="relative z-10 max-w-[640px] mx-auto px-5">
           <ScrollReveal>
-            <h2
-              className="font-serif italic"
-              style={{
-                fontSize: 'clamp(2rem, 4.4vw, 4rem)',
-                fontWeight: 350,
-                color: '#f3ece0',
-                lineHeight: 1.15,
-                letterSpacing: '-0.012em',
-                maxWidth: '22ch',
-                textWrap: 'balance',
-              }}
+            <div
+              className="ticket text-center"
+              style={{ padding: 'clamp(2.2rem, 5vw, 3.4rem) clamp(1.6rem, 4vw, 3rem)' }}
             >
-              A stone&rsquo;s throw from the Mayflower. A long evening, taken slowly, before the lights
-              go down.
-            </h2>
-            <div className="mt-12 flex items-center gap-8">
+              <div className="ticket-keyline" />
+              <span className="smallcaps smallcaps-oxblood block mb-4">
+                Directly opposite the Mayflower Theatre
+              </span>
+              <h2
+                className="font-serif"
+                style={{
+                  fontSize: 'var(--step-h2)',
+                  color: 'var(--text-primary)',
+                }}
+              >
+                Before the curtain
+              </h2>
+              <p
+                className="mx-auto mt-5"
+                style={{
+                  maxWidth: '30em',
+                  fontSize: 'var(--step-body)',
+                  lineHeight: 1.6,
+                  color: 'var(--text-secondary)',
+                }}
+              >
+                Tell us your curtain time when you book and we will pace dinner
+                around it. Pre-theatre tables are seated from five o&rsquo;clock,
+                forty steps from the foyer.
+              </p>
               <a
                 href={RESERVE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-reserve btn-reserve-light"
+                className="btn-oxblood mt-8"
               >
-                Reserve
-              </a>
-              <a
-                href="tel:02380234044"
-                className="link-underline tabular"
-                style={{
-                  fontFamily: 'Inter Tight, system-ui, sans-serif',
-                  fontSize: 'var(--step-eyebrow)',
-                  letterSpacing: '0.27em',
-                  textTransform: 'uppercase',
-                  fontWeight: 500,
-                  color: '#f3ece0',
-                }}
-              >
-                023 8023 4044
+                Reserve a pre-theatre table
               </a>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Rooms, gallery without an eyebrow */}
+      {/* Rooms: the gallery mosaic, unchanged imagery */}
       <section
         style={{
           backgroundColor: 'var(--bg-primary)',
@@ -543,18 +487,7 @@ export default function HomeContent() {
 
           <ScrollReveal delay={0.3}>
             <div className="mt-12 flex justify-end">
-              <Link
-                href="/gallery/"
-                className="link-underline"
-                style={{
-                  fontFamily: 'Inter Tight, system-ui, sans-serif',
-                  fontSize: 'var(--step-eyebrow)',
-                  letterSpacing: '0.27em',
-                  textTransform: 'uppercase',
-                  fontWeight: 500,
-                  color: 'var(--text-primary)',
-                }}
-              >
+              <Link href="/gallery/" className="link-sc">
                 Full gallery
               </Link>
             </div>
@@ -562,56 +495,51 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Pull-quote review */}
+      {/* Notices: featured review as a declaration, three smaller quotes in
+          columns, closed by the ratings line */}
       <section
         style={{
           backgroundColor: 'var(--bg-tertiary)',
-          paddingTop: 'clamp(4.5rem, 16vh, 16rem)',
-          paddingBottom: 'clamp(4.5rem, 16vh, 16rem)',
+          paddingTop: 'clamp(4.5rem, 15vh, 13rem)',
+          paddingBottom: 'clamp(4.5rem, 15vh, 13rem)',
         }}
       >
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-12 text-center">
           <ScrollReveal>
             <blockquote>
-              <p
-                className="font-serif italic"
+              <span
+                aria-hidden="true"
+                className="font-serif block"
                 style={{
-                  fontSize: 'clamp(1.85rem, 4.4vw, 4rem)',
-                  fontWeight: 350,
-                  color: 'var(--text-primary)',
-                  lineHeight: 1.15,
-                  letterSpacing: '-0.012em',
-                  textWrap: 'balance',
-                  maxWidth: '24ch',
+                  fontSize: 'clamp(70px, 8vw, 104px)',
+                  lineHeight: 1,
+                  height: '0.48em',
+                  color: 'var(--gold)',
                 }}
               >
-                Every dish here is a masterpiece. Soleto instantly transports you with its
-                charming and vintage decor.
+                &ldquo;
+              </span>
+              <p
+                className="font-serif mx-auto"
+                style={{
+                  fontSize: 'clamp(1.7rem, 3.4vw, 2.55rem)',
+                  lineHeight: 1.26,
+                  letterSpacing: '-0.005em',
+                  maxWidth: '36ch',
+                  color: 'var(--text-primary)',
+                }}
+              >
+                Every dish here is a masterpiece. Soleto instantly transports
+                you with its charming and vintage decor.
               </p>
-              <footer className="mt-10 flex items-baseline gap-4">
-                <span
-                  className="rule-hairline"
-                  style={{ width: '32px', display: 'inline-block' }}
-                />
-                <p
-                  style={{
-                    fontFamily: 'Inter Tight, system-ui, sans-serif',
-                    fontSize: 'var(--step-eyebrow)',
-                    letterSpacing: '0.27em',
-                    textTransform: 'uppercase',
-                    fontWeight: 400,
-                    color: 'var(--text-muted)',
-                  }}
-                >
-                  Ella, Google
-                </p>
+              <footer className="chapterline mt-8">
+                <span className="smallcaps">Ella &middot; Google review</span>
               </footer>
             </blockquote>
           </ScrollReveal>
 
-          {/* Quiet sub-grid of three more reviews */}
           <ScrollReveal delay={0.2}>
-            <div className="mt-12 md:mt-20 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-11 text-left">
               {[
                 {
                   quote:
@@ -634,37 +562,31 @@ export default function HomeContent() {
               ].map((r) => (
                 <div key={r.name}>
                   <p
-                    className="font-serif italic"
+                    className="italic"
                     style={{
-                      fontSize: '17px',
-                      lineHeight: 1.65,
+                      fontSize: '1.02rem',
+                      lineHeight: 1.6,
                       color: 'var(--text-secondary)',
-                      fontWeight: 380,
                     }}
                   >
                     &ldquo;{r.quote}&rdquo;
                   </p>
-                  <p
-                    className="mt-6"
-                    style={{
-                      fontFamily: 'Inter Tight, system-ui, sans-serif',
-                      fontSize: 'var(--step-eyebrow)',
-                      letterSpacing: '0.27em',
-                      textTransform: 'uppercase',
-                      fontWeight: 400,
-                      color: 'var(--text-muted)',
-                    }}
-                  >
+                  <p className="smallcaps mt-3" style={{ fontSize: '11.5px' }}>
                     {r.name} {String.fromCharCode(183)} {r.source}
                   </p>
                 </div>
               ))}
             </div>
+            <p className="smallcaps mt-14">
+              4.7 on Google <span className="amp">&middot;</span> 4.5 on
+              TripAdvisor <span className="amp">&middot;</span> 1,500 reviews
+              and counting
+            </p>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Closing: address as architecture, no eyebrow */}
+      {/* Closing: address as architecture */}
       <section
         style={{
           backgroundColor: 'var(--bg-primary)',
@@ -677,32 +599,18 @@ export default function HomeContent() {
             <h2
               className="font-serif"
               style={{
-                fontSize: 'clamp(2.25rem, 6vw, 5.5rem)',
-                fontWeight: 320,
+                fontSize: 'var(--step-display)',
                 color: 'var(--text-primary)',
-                letterSpacing: '-0.02em',
-                lineHeight: 1,
+                lineHeight: 1.02,
                 textWrap: 'balance',
               }}
             >
-              11 Commercial Road, Southampton.
+              11 Commercial Road, Southampton
             </h2>
 
-            <div className="mt-10 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 items-start">
+            <div className="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 items-start">
               <div>
-                <p
-                  style={{
-                    fontFamily: 'Inter Tight, system-ui, sans-serif',
-                    fontSize: 'var(--step-eyebrow)',
-                    letterSpacing: '0.27em',
-                    textTransform: 'uppercase',
-                    fontWeight: 400,
-                    color: 'var(--text-muted)',
-                    marginBottom: '0.75rem',
-                  }}
-                >
-                  Hours
-                </p>
+                <p className="smallcaps smallcaps-muted mb-3">Hours</p>
                 <p
                   className="tabular"
                   style={{
@@ -711,75 +619,50 @@ export default function HomeContent() {
                     color: 'var(--text-secondary)',
                   }}
                 >
-                  Tuesday &ndash; Saturday <br />
-                  17:00 &ndash; 22:00
+                  Tuesday to Saturday, five until ten
                   <br />
-                  <br />
-                  Sunday &amp; Monday <br />
-                  Closed
+                  Sunday and Monday, closed
                 </p>
                 <p
                   className="mt-4"
                   style={{
-                    fontSize: '12px',
+                    fontSize: '13px',
                     lineHeight: 1.5,
                     color: 'var(--text-muted)',
                   }}
                 >
-                  Summer evenings only &mdash; lunches return in September.
+                  Summer evenings only; lunches return in September.
                 </p>
               </div>
 
               <div>
-                <p
-                  style={{
-                    fontFamily: 'Inter Tight, system-ui, sans-serif',
-                    fontSize: 'var(--step-eyebrow)',
-                    letterSpacing: '0.27em',
-                    textTransform: 'uppercase',
-                    fontWeight: 400,
-                    color: 'var(--text-muted)',
-                    marginBottom: '0.75rem',
-                  }}
-                >
-                  Telephone
+                <p className="smallcaps smallcaps-muted mb-3">
+                  Telephone <span className="amp">&amp;</span> correspondence
                 </p>
-                <a
-                  href="tel:02380234044"
-                  className="tabular link-underline"
-                  style={{
-                    fontSize: 'var(--step-lead)',
-                    color: 'var(--text-primary)',
-                    fontWeight: 400,
-                  }}
-                >
-                  023 8023 4044
-                </a>
-                <p
-                  className="mt-6"
-                  style={{
-                    fontFamily: 'Inter Tight, system-ui, sans-serif',
-                    fontSize: 'var(--step-eyebrow)',
-                    letterSpacing: '0.27em',
-                    textTransform: 'uppercase',
-                    fontWeight: 400,
-                    color: 'var(--text-muted)',
-                    marginBottom: '0.75rem',
-                  }}
-                >
-                  Correspondence
+                <p style={{ fontSize: 'var(--step-lead)', lineHeight: 1.8 }}>
+                  <a
+                    href="tel:02380234044"
+                    className="tabular"
+                    style={{
+                      color: 'var(--text-primary)',
+                      textDecoration: 'none',
+                      borderBottom: '1px solid var(--gold)',
+                    }}
+                  >
+                    023 8023 4044
+                  </a>
+                  <br />
+                  <a
+                    href="mailto:info@soleto.co.uk"
+                    style={{
+                      color: 'var(--text-primary)',
+                      textDecoration: 'none',
+                      borderBottom: '1px solid var(--gold)',
+                    }}
+                  >
+                    info@soleto.co.uk
+                  </a>
                 </p>
-                <a
-                  href="mailto:info@soleto.co.uk"
-                  className="link-underline"
-                  style={{
-                    fontSize: 'var(--step-lead)',
-                    color: 'var(--text-primary)',
-                    fontWeight: 400,
-                  }}
-                >
-                  info@soleto.co.uk
-                </a>
               </div>
 
               <div className="md:text-right">
@@ -789,10 +672,9 @@ export default function HomeContent() {
                   rel="noopener noreferrer"
                   className="font-serif italic"
                   style={{
-                    fontSize: 'clamp(2rem, 4vw, 3rem)',
-                    fontWeight: 350,
+                    fontSize: 'clamp(1.7rem, 3vw, 2.5rem)',
                     color: 'var(--accent)',
-                    letterSpacing: '-0.01em',
+                    letterSpacing: '-0.005em',
                     lineHeight: 1,
                     textDecoration: 'underline',
                     textDecorationThickness: '1px',

@@ -129,9 +129,9 @@ export default function CookieBanner() {
               type="button"
               onClick={handleDecline}
               style={{
-                fontFamily: 'Inter Tight, system-ui, sans-serif',
+                fontFamily: 'Newsreader, Georgia, serif',
                 fontSize: '10px',
-                letterSpacing: '0.27em',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 fontWeight: 500,
                 color: 'var(--text-muted)',
@@ -154,9 +154,9 @@ export default function CookieBanner() {
               type="button"
               onClick={handleAccept}
               style={{
-                fontFamily: 'Inter Tight, system-ui, sans-serif',
+                fontFamily: 'Newsreader, Georgia, serif',
                 fontSize: '10px',
-                letterSpacing: '0.27em',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 fontWeight: 500,
                 color: 'var(--bg-primary)',

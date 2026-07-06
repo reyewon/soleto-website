@@ -64,9 +64,9 @@ function ConsentGatedMap() {
     >
       <p
         style={{
-          fontFamily: 'Inter Tight, system-ui, sans-serif',
-          fontSize: 'var(--step-eyebrow)',
-          letterSpacing: '0.27em',
+          fontFamily: 'Newsreader, Georgia, serif',
+          fontSize: 'var(--step-label)',
+          letterSpacing: '0.14em',
           textTransform: 'uppercase',
           fontWeight: 500,
           color: 'var(--text-muted)',
@@ -102,9 +102,9 @@ const RESERVE_URL =
   'https://web.dojo.app/create_booking/vendor/bxU6ck62m7nZ2hSjU6_X9UfdHHqOIAn9Nfy8-GrJbI8_restaurant'
 
 const labelStyle = {
-  fontFamily: 'Inter Tight, system-ui, sans-serif',
-  fontSize: 'var(--step-eyebrow)',
-  letterSpacing: '0.27em',
+  fontFamily: 'Newsreader, Georgia, serif',
+  fontSize: 'var(--step-label)',
+  letterSpacing: '0.14em',
   textTransform: 'uppercase' as const,
   fontWeight: 500,
   color: 'var(--text-muted)',
@@ -114,7 +114,7 @@ export default function ContactContent() {
   return (
     <>
       {/* Hero, minimal */}
-      <section data-nav-transparent className="relative h-[50vh] min-h-[350px] overflow-hidden">
+      <section data-nav-transparent className="relative h-[46vh] min-h-[330px] overflow-hidden seam-btm">
         <ParallaxBg>
           <Image
             src="/images/interior/exterior-wide.jpg"
@@ -124,11 +124,27 @@ export default function ContactContent() {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-black/45" />
+          <div className="absolute inset-0 bg-black/30" />
         </ParallaxBg>
-        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
-          <h1 className="font-serif text-h1" style={{ color: '#f3ece0' }}>
-            Contact
+      </section>
+
+      {/* Page title, book-page opener */}
+      <section
+        style={{
+          backgroundColor: 'var(--bg-primary)',
+          paddingTop: 'clamp(3.5rem, 9vh, 6.5rem)',
+          paddingBottom: 'clamp(1rem, 3vh, 2rem)',
+        }}
+      >
+        <div className="max-w-[880px] mx-auto px-6 text-center">
+          <div className="chapterline mb-6">
+            <span className="smallcaps">Forty steps from the Mayflower foyer</span>
+          </div>
+          <h1
+            className="font-serif"
+            style={{ fontSize: 'var(--step-h1)', color: 'var(--text-primary)' }}
+          >
+            Find us
           </h1>
         </div>
       </section>
@@ -154,7 +170,7 @@ export default function ContactContent() {
                 textWrap: 'balance',
               }}
             >
-              11 Commercial Road, Southampton.
+              11 Commercial Road, Southampton
             </h2>
             <p
               className="mt-6"
@@ -215,8 +231,8 @@ export default function ContactContent() {
                     }}
                   >
                     <div className="flex justify-between max-w-xs">
-                      <span>Tuesday &ndash; Saturday</span>
-                      <span>17:00 &ndash; 22:00</span>
+                      <span>Tuesday to Saturday</span>
+                      <span>17:00 to 22:00</span>
                     </div>
                     <div className="flex justify-between max-w-xs">
                       <span>Sunday &amp; Monday</span>
@@ -232,7 +248,7 @@ export default function ContactContent() {
                       maxWidth: '32ch',
                     }}
                   >
-                    Summer evenings only &mdash; lunches return in September. Special hours may apply on theatre nights and bank holidays; please call to confirm.
+                    Summer evenings only; lunches return in September. Special hours may apply on theatre nights and bank holidays; please call to confirm.
                   </p>
                 </div>
 
@@ -300,30 +316,62 @@ export default function ContactContent() {
         </div>
       </section>
 
-      {/* Theatre note, italic over warm bg */}
+      {/* Before or after the show: ticket panel over the dining room */}
       <section
+        data-nav-transparent
+        className="relative seam-top seam-btm"
         style={{
-          backgroundColor: 'var(--bg-secondary)',
-          paddingTop: 'clamp(4rem, 12vh, 9rem)',
-          paddingBottom: 'clamp(4rem, 12vh, 9rem)',
+          paddingTop: 'clamp(5rem, 14vh, 10rem)',
+          paddingBottom: 'clamp(5rem, 14vh, 10rem)',
         }}
       >
-        <div className="max-w-[1100px] mx-auto px-6 md:px-12">
+        <div className="absolute inset-0 overflow-hidden">
+          <Image
+            src="/images/interior/peek-through.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-black/30" />
+        </div>
+        <div className="relative z-10 max-w-[640px] mx-auto px-5">
           <ScrollReveal>
-            <h2
-              className="font-serif italic text-balance"
-              style={{
-                fontSize: 'clamp(1.85rem, 4vw, 3.5rem)',
-                fontWeight: 400,
-                color: 'var(--text-primary)',
-                lineHeight: 1.15,
-                letterSpacing: '-0.01em',
-                maxWidth: '22ch',
-              }}
+            <div
+              className="ticket text-center"
+              style={{ padding: 'clamp(2.2rem, 5vw, 3.4rem) clamp(1.6rem, 4vw, 3rem)' }}
             >
-              A stone&rsquo;s throw from the Mayflower. Book for a leisurely evening, before or after
-              the show.
-            </h2>
+              <div className="ticket-keyline" />
+              <span className="smallcaps smallcaps-oxblood block mb-4">
+                Directly opposite the Mayflower Theatre
+              </span>
+              <h2
+                className="font-serif"
+                style={{ fontSize: 'var(--step-h2)', color: 'var(--text-primary)' }}
+              >
+                Before or after the show
+              </h2>
+              <p
+                className="mx-auto mt-5"
+                style={{
+                  maxWidth: '30em',
+                  fontSize: 'var(--step-body)',
+                  lineHeight: 1.6,
+                  color: 'var(--text-secondary)',
+                }}
+              >
+                Tell us your curtain time when you book and we will pace dinner
+                around it. Pre-theatre tables are seated from five o&rsquo;clock.
+              </p>
+              <a
+                href={RESERVE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-oxblood mt-8"
+              >
+                Reserve a table
+              </a>
+            </div>
           </ScrollReveal>
         </div>
       </section>

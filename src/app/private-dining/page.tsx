@@ -4,7 +4,7 @@ import PrivateDiningContent from './PrivateDiningContent'
 export const metadata: Metadata = {
   title: 'Private Dining & Catering',
   description:
-    'Private dining room for up to 14 guests at Soleto Southampton, opposite the Mayflower Theatre. Private catering for 30+ guests across Hampshire by chef George Jiojioras — weddings, corporate events, milestone celebrations with bespoke Italian and Mediterranean menus.',
+    'Private dining room for up to 14 guests at Soleto Southampton, opposite the Mayflower Theatre. Private catering for 30+ guests across Hampshire by chef George Jiojioras: weddings, corporate events, milestone celebrations with bespoke Italian and Mediterranean menus.',
   keywords: [
     'private dining Southampton',
     'private catering Southampton',
