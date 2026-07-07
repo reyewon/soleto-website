@@ -58,3 +58,6 @@ docs/
 
 # impeccable live-mode local config (tooling state)
 .impeccable/
+
+# Cursor editor harness (local tooling)
+.cursor/
