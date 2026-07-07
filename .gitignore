@@ -55,3 +55,6 @@ docs/
 /Soleto Header Video.mp4
 /SAMPLE-DAILY-SPECIALS.pdf
 /menu.pdf
+
+# impeccable live-mode local config (tooling state)
+.impeccable/
