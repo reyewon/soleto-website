@@ -1,6 +1,6 @@
 # Soleto — Trattoria Italiana
 
-> Family-run Italian restaurant in Southampton, opposite the Mayflower Theatre. Head chef George Jiojioras serves fresh seafood, handmade pasta and premium steaks with Mediterranean passion.
+> Family-run Italian restaurant in Southampton, opposite the Mayflower Theatre. Head chef George Jiojioras serves fresh seafood, handmade pasta and premium steaks.
 
 ## Contact
 
@@ -78,6 +78,10 @@ Head chef George Jiojioras has cooked for Ralph Fiennes, Peter Andre, Bobby Davr
 - **Contorni (Sides):** 6 items, all £5
 - **Daily Specials:** Fresh seafood and premium cuts selected daily — oysters, lobster, Dover sole, tomahawk steak, rack of lamb and more
 
+## Christmas Menu 2026
+
+Set menu, four choices at each of three courses. Lunch £38 (two courses) or £45 (three); dinner £50 (three courses), per person. Parties of six or more, pre-order only, £10 deposit per person, 10% service charge added to the bill. Two vegetarian/vegan dishes (roasted butternut squash soup; roast cauliflower with saffron risotto). Book by phone (023 8023 4044) or email (info@soleto.co.uk). Menu PDF: https://www.soleto.co.uk/docs/soleto-christmas-menu-2026.pdf
+
 ## Signature Dishes
 
 Fresh lobster, seared scallops with guanciale, pappardelle ragu, linguini frutti di mare, rib-eye steak, Dover sole, salt-baked whole fish, tomahawk steak
@@ -86,6 +90,7 @@ Fresh lobster, seared scallops with guanciale, pappardelle ragu, linguini frutti
 
 - [Home](https://www.soleto.co.uk/) — Overview, featured dishes, reviews, interior gallery
 - [Menu](https://www.soleto.co.uk/menu/) — Full à la carte menu with prices and daily specials
+- [Christmas Menu 2026](https://www.soleto.co.uk/christmas/) — Set Christmas menu, prices, pre-order and deposit terms, downloadable PDF
 - [Our Story](https://www.soleto.co.uk/our-story/) — The Jiojioras family story, chef profile, awards
 - [Gallery](https://www.soleto.co.uk/gallery/) — Photos of food, interior and drinks
 - [Private Dining & Catering](https://www.soleto.co.uk/private-dining/) — Private dining room (up to 14 guests) and off-site catering by George (30+ guests, Hampshire-wide)

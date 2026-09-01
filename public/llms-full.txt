@@ -1,6 +1,6 @@
 # Soleto — Trattoria Italiana (Full Reference)
 
-> Family-run Italian restaurant in Southampton, opposite the Mayflower Theatre. Head chef George Jiojioras serves fresh seafood, handmade pasta and premium steaks with Mediterranean passion.
+> Family-run Italian restaurant in Southampton, opposite the Mayflower Theatre. Head chef George Jiojioras serves fresh seafood, handmade pasta and premium steaks.
 
 ## Contact
 
@@ -145,6 +145,34 @@ Each day, George selects the finest seasonal and market-fresh ingredients for th
 
 Note: Gluten-free pasta is available for all pasta dishes. A discretionary 12.5% service charge is added to the total bill.
 
+## Christmas Menu 2026
+
+Set menu for the festive season, cooked by George Jiojioras. Four choices at each course.
+
+**Prices (per person):** Lunch, two courses £38 · Lunch, three courses £45 · Dinner, three courses £50
+
+**Terms:** Parties of six or more. Pre-order only (every guest chooses their courses before the day). £10 deposit per person, taken at booking. 10% service charge added to the total bill.
+
+**Booking:** Call 023 8023 4044 or email info@soleto.co.uk with date, party size and lunch or dinner. Web page: https://www.soleto.co.uk/christmas/ · PDF: https://www.soleto.co.uk/docs/soleto-christmas-menu-2026.pdf
+
+### Starters
+- Roasted Butternut Squash Soup — spiced cinnamon, ciabatta crostini (v/vg)
+- Italian Charcuterie — Grana Padano, rocket, pine nuts, balsamic and crostini
+- Classic Prawn and Crab Cocktail — toasted ciabatta and butter
+- Whipped Feta and Ricotta — pickled courgette shavings, toasted chickpeas
+
+### Mains
+- Roast Turkey Paupiette — sage and onion stuffing, pig in blanket, sauté potatoes, mixed veg and turkey jus
+- Classic Beef Bourguignon al Barolo — creamy mash, mixed veg
+- Fish and Shellfish Medley — bouillabaisse style
+- Roast Cauliflower — saffron risotto (v/vg)
+
+### Desserts
+- Classic Tiramisu
+- Salted Caramel and Chocolate Tart — vanilla ice cream
+- Panettone Pudding — cinnamon custard
+- Basque Vanilla Cheesecake — red fruit coulis
+
 ## Private Dining & Catering
 
 Soleto offers two distinct private services:
@@ -179,6 +207,7 @@ Perfectly positioned opposite Southampton's iconic Mayflower Theatre, Soleto is 
 
 - [Home](https://www.soleto.co.uk/) — Overview, featured dishes, reviews, interior gallery
 - [Menu](https://www.soleto.co.uk/menu/) — Full à la carte menu with prices and daily specials
+- [Christmas Menu 2026](https://www.soleto.co.uk/christmas/) — Set Christmas menu, prices, pre-order and deposit terms, downloadable PDF
 - [Our Story](https://www.soleto.co.uk/our-story/) — The Jiojioras family story, chef profile, awards
 - [Gallery](https://www.soleto.co.uk/gallery/) — Photos of food, interior and drinks
 - [Private Dining & Catering](https://www.soleto.co.uk/private-dining/) — Private dining room (up to 14 guests) and off-site catering by George (30+ guests, Hampshire-wide)

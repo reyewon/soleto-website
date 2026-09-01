@@ -180,6 +180,11 @@ export default function MenuContent() {
                 View today&rsquo;s specials
               </a>
             </p>
+            <p className="mt-5">
+              <a href="/christmas/" className="link-sc">
+                Christmas 2026 menu
+              </a>
+            </p>
           </ScrollReveal>
         </div>
       </section>

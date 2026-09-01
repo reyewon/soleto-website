@@ -172,6 +172,7 @@ const breadcrumbJsonLd = {
     { '@type': 'ListItem', position: 4, name: 'Gallery', item: 'https://www.soleto.co.uk/gallery/' },
     { '@type': 'ListItem', position: 5, name: 'Private Dining & Catering', item: 'https://www.soleto.co.uk/private-dining/' },
     { '@type': 'ListItem', position: 6, name: 'Contact', item: 'https://www.soleto.co.uk/contact/' },
+    { '@type': 'ListItem', position: 7, name: 'Christmas Menu', item: 'https://www.soleto.co.uk/christmas/' },
   ],
 }
 
