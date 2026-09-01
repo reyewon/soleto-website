@@ -83,7 +83,7 @@ export default function GalleryContent() {
       >
         <div className="max-w-[880px] mx-auto px-6 text-center">
           <div className="chapterline mb-6">
-            <span className="smallcaps">The rooms <span className="amp">&amp;</span> the plates</span>
+            <span className="smallcaps">The dining room, the food, the bar</span>
           </div>
           <h1
             className="font-serif"

@@ -4,7 +4,7 @@ export const SITE = {
   shortName: 'Soleto',
   tagline: 'Trattoria Italiana',
   description:
-    'Family-run Italian restaurant in Southampton, opposite the Mayflower Theatre. Head chef George Jiojioras serves fresh seafood, handmade pasta and premium steaks with Mediterranean passion. Summer evenings: Tuesday to Saturday, 17:00 to 22:00.',
+    'Family-run Italian restaurant in Southampton, opposite the Mayflower Theatre. Head chef George Jiojioras serves fresh seafood, handmade pasta and premium steaks. Summer evenings: Tuesday to Saturday, 17:00 to 22:00.',
   url: 'https://www.soleto.co.uk',
   email: 'info@soleto.co.uk',
   telephone: '+442380234044',

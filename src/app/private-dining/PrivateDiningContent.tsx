@@ -92,7 +92,7 @@ export default function PrivateDiningContent() {
                   color: 'var(--text-primary)',
                 }}
               >
-                A private room for fourteen, and catering for thirty and beyond
+                Two kinds of booking
               </h2>
               <div className="prose-cols mt-10">
                 <p className="dropcap">
@@ -249,17 +249,17 @@ export default function PrivateDiningContent() {
                   Private catering Southampton
                 </p>
                 <h2
-                  className="font-serif italic"
+                  className="font-serif"
                   style={{
-                    fontSize: 'clamp(1.85rem, 3.4vw, 3rem)',
+                    fontSize: 'clamp(1.85rem, 3.2vw, 2.75rem)',
                     fontWeight: 340,
-                    letterSpacing: '-0.01em',
+                    letterSpacing: '-0.005em',
                     lineHeight: 1.12,
                     color: 'var(--text-primary)',
                     textWrap: 'balance',
                   }}
                 >
-                  Cooking for your event, on your terms
+                  Catering at your venue
                 </h2>
                 <p
                   id="catering-intro"
@@ -373,7 +373,7 @@ export default function PrivateDiningContent() {
                 marginBottom: '1rem',
               }}
             >
-              Common questions
+              Private dining and catering
             </p>
             <h2
               className="font-serif text-balance"
@@ -386,7 +386,7 @@ export default function PrivateDiningContent() {
                 marginBottom: '2.5rem',
               }}
             >
-              Private dining and catering at Soleto, answered
+              Common questions
             </h2>
           </ScrollReveal>
 

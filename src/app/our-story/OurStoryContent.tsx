@@ -63,7 +63,7 @@ export default function OurStoryContent() {
                 color: 'var(--text-primary)',
               }}
             >
-              Where heritage meets the table
+              How Soleto started
             </h2>
             <div className="prose-cols mt-10">
               <p className="dropcap">
@@ -170,7 +170,7 @@ export default function OurStoryContent() {
                     color: 'var(--text-primary)',
                   }}
                 >
-                  Craft, every service
+                  Seafood, pasta and the specials board
                 </h2>
                 <div
                   className="space-y-5 mt-8"
@@ -348,7 +348,7 @@ export default function OurStoryContent() {
                 color: 'var(--text-primary)',
               }}
             >
-              On the record
+              Awards and press
             </h2>
           </ScrollReveal>
 

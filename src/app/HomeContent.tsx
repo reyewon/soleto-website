@@ -117,7 +117,7 @@ export default function HomeContent() {
           <ScrollReveal>
             <div className="chapterline mb-7">
               <span className="smallcaps">
-                Family run <span className="amp">&amp;</span> family owned
+                Italian and Mediterranean
               </span>
             </div>
             <h2
@@ -323,7 +323,7 @@ export default function HomeContent() {
                   textWrap: 'balance',
                 }}
               >
-                Where Greek heritage meets Italian craft
+                The kitchen
               </h2>
               <p
                 className="mt-7"
