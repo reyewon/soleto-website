@@ -83,8 +83,8 @@ export default function ChristmasContent() {
       >
         <ParallaxBg>
           <Image
-            src="/images/drinks/champagne-bucket.jpg"
-            alt="Prosecco bottles chilling in a copper bucket at Soleto"
+            src="/images/christmas/lamplit-table.jpg"
+            alt="A lamp-lit table at Soleto laid with wine glasses"
             fill
             className="object-cover"
             priority
@@ -315,7 +315,7 @@ export default function ChristmasContent() {
       >
         <div className="absolute inset-0 overflow-hidden">
           <Image
-            src="/images/interior/dining-room.jpg"
+            src="/images/christmas/chandelier.jpg"
             alt=""
             fill
             className="object-cover"
