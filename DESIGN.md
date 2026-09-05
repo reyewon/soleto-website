@@ -190,3 +190,16 @@ Two grain layers create material, not elevation: a warm brown paper grain under 
 - **Don't** end a short header in a **full stop**, and don't use em or en dashes in visible copy (write "to", ";", or ":").
 - **Don't** set body text in **light grey "for elegance"**, and never use gold (#b89569) as text; both fail contrast for the older theatre-going audience.
 - **Don't** add box-shadows to make things "pop"; this system is flat, with the ticket as the only raised element.
+
+## Guardrails (design ledger, 5 Sep 2026)
+
+Protect, never replace: the hero with no buttons. Full-bleed video, one logo, one italic caption, then the drop-cap intro paragraph. A "Book a table" button in the hero is the default reflex this site deliberately refuses; booking lives in the nav and the visit section.
+
+The risk is surface, not structure: two serifs (Newsreader + Cardo) on cream with centred 880px prose sits close to the "luxury but AI" recipe. Next design pass: break the centring (left-set the prose, vary the measure, let one photograph interrupt the column at full bleed) and consider a sans for nav and UI labels only, so the serifs stay for reading.
+
+Retired: hover-zoom on images (`.img-hover-zoom` is now a no-op). Keep: the small-caps chapterline, the drop cap.
+
+Never use the "soleto-website-editorial" build as a base: Fraunces (banned) and a centred two-button hero. It is archived, not deployable.
+
+Before any deploy: `python3 ~/.claude/skills/humanise/scripts/recycle-check.py out/index.html --site Soleto`, then visual-qc at Ryan's real viewports. The one standing recycle flag (cream ground + red accent shape shared with the Corfu Albania guide) is a kept choice: bone and oxblood are the restaurant's own identity, and Domi does not want a dark site.
+

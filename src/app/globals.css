@@ -399,14 +399,10 @@ html.lenis, html.lenis body {
   .img-editorial img {
     filter: contrast(1.04) saturate(0.94);
   }
+  /* Hover-zoom retired (design ledger, 5 Sep 2026): the scale-on-hover was a
+     reflex, not a choice. Class kept as a no-op so markup need not change. */
   .img-hover-zoom {
     overflow: hidden;
-  }
-  .img-hover-zoom img {
-    transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
-  }
-  .img-hover-zoom:hover img {
-    transform: scale(1.04);
   }
 
   /* Clip-path curtain reveal, editorial alternative to fade-up */
@@ -451,4 +447,13 @@ html.lenis, html.lenis body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-muted);
+}
+
+/* Embed-mode backstop (kombu.uk portfolio preview). The cookie banner and
+   refurbishment notice are already gated behind isEmbedded() in their own
+   JS so neither mounts for embedded visitors; these rules are a CSS
+   backstop in case either renders before the detection script has run. */
+html.is-embedded [aria-label="Cookies"],
+html.is-embedded [aria-label="Refurbishment notice"] {
+  display: none !important;
 }
