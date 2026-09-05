@@ -23,8 +23,14 @@ html.lenis, html.lenis body {
   overflow: hidden;
 }
 
-.lenis.lenis-scrolling {
-  overflow: clip;
+/* The scrollbar is a classic (non-overlay) 5px bar because it is styled
+   below, so its width is part of the layout. Reserve that gutter always,
+   including while Lenis is mid-scroll or stopped, so the page never nudges
+   sideways when the bar comes and goes. The old
+   `.lenis-scrolling { overflow: clip }` rule hid the bar during scroll and
+   returned it on stop, which caused exactly that nudge. */
+html {
+  scrollbar-gutter: stable;
 }
 
 @layer base {
